@@ -1,0 +1,46 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model LibraryMVC.Models.LibraryItemModel
+@using LibraryMVC.Enums
+@{
+    Layout = null;
+}
+<div class="card col-sm-6 col-md-4 col-lg-3 col-12 ">
+    <a asp-controller="Home" asp-action="Detail" asp-route-id="@Model.Id" class="text-decoration-none text-black">
+        @switch (Model.Type)
+        {
+            case ItemType.Book:
+            <img src="~/img/Book.jpg" class="card-img-top" alt="...">
+            break;
+            case ItemType.Dvd:
+            <img src="~/img/Dvd.jpg" class="card-img-top" alt="...">
+            break;
+            case ItemType.Magazine:
+            <img src="~/img/Magazine.jpg" class="card-img-top" alt="...">
+            break;
+        }
+
+
+        <div class="card-body">
+            <h5 class="card-title">@(Model.Type): @Model.Title</h5>
+            <p class="card-text">@Model.Author</p>
+            <p class="card-text">Quantity: @Model.Quantity</p>
+            @if (Model.Type is ItemType.Book)
+            {
+                <p class="card-text">Number Of Pages: @Model.NumberOfPages</p>
+            }
+            else if (Model.Type is ItemType.Dvd)
+            {
+                <p class="card-text">Runtime: @Model.Runtime minutes</p>
+            }
+            else if (Model.Type is ItemType.Magazine)
+            {
+                <p class="card-text">Magazine</p>
+            }
+        </div>
+        <div class="card-footer">
+            <a href="#" class="btn btn-primary">Borrow</a>
+        </div>
+    </a>
+</div>

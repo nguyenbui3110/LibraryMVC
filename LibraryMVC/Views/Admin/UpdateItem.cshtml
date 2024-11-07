@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout= "_AdminLayout";
+}
+@model LibraryMVC.Models.LibraryItemModel
+@using LibraryMVC.Enums
+
+<h2>Update Library Item</h2>
+
+<form asp-action="UpdateItem" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Author" class="control-label"></label>
+        <input asp-for="Author" class="form-control" />
+        <span asp-validation-for="Author" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PublicationDate" class="control-label"></label>
+        <input asp-for="PublicationDate" class="form-control" type="date" />
+        <span asp-validation-for="PublicationDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity" class="control-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <div class="form-group" id="type" disabled>
+        <label asp-for="Type" class="control-label"></label>
+        <select asp-for="Type" class="form-control " disabled asp-items="Html.GetEnumSelectList<ItemType>()"></select>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+    @if (Model.Type == ItemType.Book)
+    {
+    <div class="form-group" id="bookProp">
+        <label asp-for="NumberOfPages" class="control-label" ></label>
+        <input asp-for="NumberOfPages" class="form-control" />
+        <span asp-validation-for="NumberOfPages" class="text-danger"></span>
+    </div>
+    }
+    else if (Model.Type == ItemType.Dvd)
+    {
+    <div class="form-group" id="dvdProp" >
+        <label asp-for="Runtime" class="control-label"></label>
+        <input asp-for="Runtime" class="form-control" />
+        <span asp-validation-for="Runtime" class="text-danger"></span>
+    </div>
+    }
+
+    <div class="form-group">
+        <input type="submit" value="Update Item" class="btn btn-primary" />
+    </div>
+</form>

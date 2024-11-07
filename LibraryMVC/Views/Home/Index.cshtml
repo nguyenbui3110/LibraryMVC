@@ -1,0 +1,24 @@
+﻿@using LibraryMVC.Enums
+@model LibraryMVC.Models.PagingLibraryItem
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <form asp-action="Filter" asp-controller="Home" method="post">
+    <div>
+        <label>Type</label>
+
+        <select name="itemType" asp-items="Html.GetEnumSelectList<ItemType>()" onchange="this.form.submit()">
+            <option value="" disabled selected>Choose type</option>
+        </select>
+    </div>
+    
+    </form>    
+</div>
+<div class="row justify-content-center">
+    @foreach (var item in Model.LibraryItems)
+    {
+        <partial name="_ItemCard" model="item" />
+    }
+</div>
+<partial name="_Paging" model="Model"></partial>

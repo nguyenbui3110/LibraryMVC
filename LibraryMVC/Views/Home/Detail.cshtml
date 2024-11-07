@@ -1,0 +1,47 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Detail";
+}
+@model LibraryMVC.Entity.LibraryItem
+@using LibraryMVC.Entity;
+<div class="card mb-3 align-content-center" style="max-width: 1280px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            @if (Model is Book)
+            {
+                <img src="~/img/Book.jpg" class="card-img-top" alt="book">
+            }
+            else if (Model is Dvd)
+            {
+                <img src="~/img/Dvd.jpg" class="card-img-top" alt="dvd">
+            }
+            else if (Model is Magazine)
+            {
+                <img src="~/img/Magazine.jpg" class="card-img-top" alt="magazine">
+            }
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">@(Model.GetType().Name): @Model.Title</h5>
+                <p class="card-text">@Model.Author</p>
+                <p class="card-text"><small class="text-body-secondary">Quantity: @Model.Quantity</small></p>
+                @if (Model is Book)
+                {
+                    <p class="card-text">Number Of Pages: @((Model as Book).NumberOfPages)</p>
+                }
+                else if (Model is Dvd)
+                {
+                    <p class="card-text">Runtime: @((Model as Dvd).Runtime) minutes</p>
+                }
+                else if (Model is Magazine)
+                {
+                    <p class="card-text">Magazine</p>
+                }
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
