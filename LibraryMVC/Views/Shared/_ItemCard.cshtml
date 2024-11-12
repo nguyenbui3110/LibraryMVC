@@ -1,8 +1,8 @@
 ﻿@*
 For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model LibraryMVC.Models.LibraryItemModel
 @using LibraryMVC.Enums
+@model LibraryItemModel
 @{
     Layout = null;
 }
@@ -11,14 +11,14 @@ For more information on enabling MVC for empty projects, visit https://go.micros
         @switch (Model.Type)
         {
             case ItemType.Book:
-            <img src="~/img/Book.jpg" class="card-img-top" alt="...">
-            break;
+                <img src="~/img/Book.jpg" class="card-img-top" alt="...">
+                break;
             case ItemType.Dvd:
-            <img src="~/img/Dvd.jpg" class="card-img-top" alt="...">
-            break;
+                <img src="~/img/Dvd.jpg" class="card-img-top" alt="...">
+                break;
             case ItemType.Magazine:
-            <img src="~/img/Magazine.jpg" class="card-img-top" alt="...">
-            break;
+                <img src="~/img/Magazine.jpg" class="card-img-top" alt="...">
+                break;
         }
 
 
@@ -40,7 +40,10 @@ For more information on enabling MVC for empty projects, visit https://go.micros
             }
         </div>
         <div class="card-footer">
-            <a href="#" class="btn btn-primary">Borrow</a>
+            <form method="post" asp-action="borrow" asp-controller="Borrow">
+                <input type="hidden" name="itemId" value="@Model.Id"/>
+                <button type="submit" class="btn btn-primary">Borrow</button>
+            </form>
         </div>
     </a>
 </div>

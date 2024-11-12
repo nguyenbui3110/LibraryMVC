@@ -1,91 +1,90 @@
 ﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using LibraryMVC.Models;
-using LibraryMVC.Data;
-using LibraryMVC.Services;
-using LibraryMVC.Enums;
 using AutoMapper;
+using LibraryMVC.Enums;
+using LibraryMVC.Models;
+using LibraryMVC.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryMVC.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly IMapper _mapper;
-    private readonly ILogger<HomeController> _logger;
     private readonly ILibraryService _libraryService;
+    private readonly ILogger<HomeController> _logger;
+    private readonly IMapper _mapper;
 
-    public HomeController(ILogger<HomeController> logger, ILibraryService libraryService,IMapper mapper)
+    public HomeController(ILogger<HomeController> logger, ILibraryService libraryService, IMapper mapper)
     {
         _mapper = mapper;
         _logger = logger;
         _libraryService = libraryService;
     }
-        
 
-    
+
     public async Task<IActionResult> Index(int page = 1)
     {
         var result = await _libraryService.GetLibraryItemsAsync();
-        var PageSize = 8;
-        var pagedLibraryItems = result
-            .Skip((page - 1) * PageSize)
-            .Take(PageSize)
-            .ToList();
-        var pagingLibraryItem = new PagingLibraryItem
+        var pagingLibraryItem = new PagingItem<LibraryItemModel>
         {
             CurrentPage = page,
-            CountPages = (int)Math.Ceiling(result.Count() / (double)PageSize),
-            LibraryItems = _mapper.Map<List<LibraryItemModel>>(pagedLibraryItems)
+            Items = _mapper.Map<List<LibraryItemModel>>(result)
         };
+        pagingLibraryItem.ApplyPaging();
 
         return View(pagingLibraryItem);
     }
+
     [Route("search")]
-    public async Task<IActionResult> Search(string searchParam)
+    [HttpGet]
+    public async Task<IActionResult> Search(string searchParam, int page = 1)
     {
         var result = await _libraryService.SearchLibraryItemAsync(searchParam);
-        var pagingLibraryItem = new PagingLibraryItem
+        var pagingLibraryItem = new PagingItem<LibraryItemModel>
         {
-            LibraryItems = _mapper.Map<List<LibraryItemModel>>(result)
+            Items = _mapper.Map<List<LibraryItemModel>>(result),
+            CurrentPage = page,
+            PageUrl = i => $"?page={i}&searchParam={searchParam}"
         };
+        pagingLibraryItem.ApplyPaging();
         return View("Index", pagingLibraryItem);
     }
+
+    [HttpPost]
+    [Route("search")]
+    public IActionResult Search(string searchParam)
+    {
+        return RedirectToAction("Search", new { searchParam });
+    }
+
     [Route("detail/{id:int}")]
     public async Task<IActionResult> Detail(int id)
     {
         var result = await _libraryService.GetLibraryItemAsync(id);
         return View(result);
     }
+
     [HttpPost]
     [Route("filter")]
-    public async Task<IActionResult> Filter(ItemType itemType,int page = 1)
+    public IActionResult Filter(ItemType itemType, int page = 1)
     {
-        return RedirectToAction("Filter", new { itemType = itemType, page = page });
-        
+        return RedirectToAction("Filter", new { itemType, page });
     }
+
     [HttpGet]
     [Route("filter")]
-    public async Task<IActionResult> Filter(ItemType? itemType,int page = 1)
+    public async Task<IActionResult> Filter(ItemType? itemType, int page = 1)
     {
-        if (itemType == null)
-        {
-            return RedirectToAction("Index");
-        }
+        if (itemType == null) return RedirectToAction("Index");
         var result = await _libraryService.GetItemsByTypeAsync(itemType.Value);
-        var pagingLibraryItem = new PagingLibraryItem
+        var pagingLibraryItem = new PagingItem<LibraryItemModel>
         {
             CurrentPage = page,
-            CountPages = (int)Math.Ceiling(result.Count() / (double)8),
             PageUrl = i => $"?page={i}&itemType={itemType}",
-            LibraryItems = _mapper.Map<List<LibraryItemModel>>(result.Skip((page - 1) * 8).Take(8))
+            Items = _mapper.Map<List<LibraryItemModel>>(result)
         };
+        pagingLibraryItem.ApplyPaging();
         return View("Index", pagingLibraryItem);
         // Use itemType to fetch any data or render the view accordingly
-
-    }
-    public IActionResult Privacy()
-    {
-        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

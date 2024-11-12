@@ -34,7 +34,6 @@ namespace LibraryMVC.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -47,9 +46,6 @@ namespace LibraryMVC.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<Guid>("LibraryCardId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -107,18 +103,17 @@ namespace LibraryMVC.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Address = "Admin Address",
-                            ConcurrencyStamp = "2e5f2460-78bb-4479-9adb-8891207a2e83",
+                            ConcurrencyStamp = "ca21b70a-ad86-4817-9353-03077082ba81",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("727ae296-7a61-4871-b530-28f15ea62050"),
                             LockoutEnabled = false,
                             Name = "Admin",
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEC6xobf2F0sDkwPyhHSGAOP9NubrURARJdeuWDypxvPk8Xe6VmgTU12ejhGIlOjXQA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGLjGE4k34aMXmpbxAzZTESPfIThfZodOmoHCGU95zYDOwoiNE1VNTUTa9I1l/4vyQ==",
                             PhoneNumber = "123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7572eb36-6fc8-4c56-a80e-daf34ccb5dcc",
+                            SecurityStamp = "20659c7a-57d6-4f96-86b0-ba1094199c05",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
@@ -126,401 +121,381 @@ namespace LibraryMVC.Migrations
                         {
                             Id = 2,
                             AccessFailedCount = 0,
-                            Address = "20020 Rosenbaum Drive",
-                            ConcurrencyStamp = "df59d357-efbb-497a-8567-30b2cb930f75",
-                            Email = "Tre.Torphy3@gmail.com",
+                            Address = "03284 Colby Expressway",
+                            ConcurrencyStamp = "3eaa370f-2339-4d04-8753-d8037281fdc1",
+                            Email = "Allan.Hamill9@hotmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("08fb96d4-e236-40ea-aac3-6ba468e9ef0f"),
                             LockoutEnabled = false,
-                            Name = "Marlee Cruickshank",
-                            NormalizedEmail = "TRE.TORPHY3@GMAIL.COM",
-                            NormalizedUserName = "TRE.TORPHY3@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJvkjDUsIhsQG+qo9q0Hq+41zCBAslhDfJcccSX3480/pe1+dNt9DGsR4K8FqxYk2w==",
-                            PhoneNumber = "1-348-398-2822 x42124",
+                            Name = "Rickey Moore",
+                            NormalizedEmail = "ALLAN.HAMILL9@HOTMAIL.COM",
+                            NormalizedUserName = "ALLAN.HAMILL9@HOTMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDukAucBN2tVWXwm/jYmXp3Da2g/1nU4bSXezRYPZxDzmiYsfO/ozzA3gXkMdYocVQ==",
+                            PhoneNumber = "713.622.8794 x7162",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cc64e50f-f302-4194-a7e7-8d2ba96be9f0",
+                            SecurityStamp = "9da1f1ee-4286-4792-bad8-8e2dbc63767d",
                             TwoFactorEnabled = false,
-                            UserName = "Tre.Torphy3@gmail.com"
+                            UserName = "Allan.Hamill9@hotmail.com"
                         },
                         new
                         {
                             Id = 3,
                             AccessFailedCount = 0,
-                            Address = "47466 Altenwerth Club",
-                            ConcurrencyStamp = "152b349b-3a20-4824-81ed-c8a3fcdaa56a",
-                            Email = "Rolando.Zulauf@hotmail.com",
+                            Address = "981 Torp Alley",
+                            ConcurrencyStamp = "52ec81a6-228e-4175-9017-ce3d0fa033d8",
+                            Email = "Keagan42@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("a7979d46-e381-4e03-8d8c-de9e5d6b5493"),
                             LockoutEnabled = false,
-                            Name = "Precious Heller",
-                            NormalizedEmail = "ROLANDO.ZULAUF@HOTMAIL.COM",
-                            NormalizedUserName = "ROLANDO.ZULAUF@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHtuHnpcJO1bcTUStjtenR9/F44CJ8g36/2aAopUXAumKkXmbVCfCgVKx1yhLCqTvA==",
-                            PhoneNumber = "341.369.1396 x26801",
+                            Name = "Tristin Hartmann",
+                            NormalizedEmail = "KEAGAN42@GMAIL.COM",
+                            NormalizedUserName = "KEAGAN42@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJ9dVR9l/oCPv9WloyZquDCwbmFjSwQRb/OjuVFkjfIcrKcJonj9aIA1ffzc4D5zXQ==",
+                            PhoneNumber = "(753) 753-3076 x82543",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a191dda3-32e0-464b-ae4a-cfbb1de9a763",
+                            SecurityStamp = "bb7c3f6f-872d-40b2-b820-6d7783439d9c",
                             TwoFactorEnabled = false,
-                            UserName = "Rolando.Zulauf@hotmail.com"
+                            UserName = "Keagan42@gmail.com"
                         },
                         new
                         {
                             Id = 4,
                             AccessFailedCount = 0,
-                            Address = "06617 Beverly Cliff",
-                            ConcurrencyStamp = "c7f4bd72-8f7c-4dfb-b16a-a9c74e3eefb1",
-                            Email = "Shana.Kautzer22@hotmail.com",
+                            Address = "656 Gunner Light",
+                            ConcurrencyStamp = "f0b0d275-fc4d-40e0-be9e-29d07f0a3bda",
+                            Email = "Horace_Donnelly@yahoo.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("51a9193e-bab3-4470-b4e0-cb58e064be55"),
                             LockoutEnabled = false,
-                            Name = "Elva Labadie",
-                            NormalizedEmail = "SHANA.KAUTZER22@HOTMAIL.COM",
-                            NormalizedUserName = "SHANA.KAUTZER22@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEO27y7GgsBjF0h3JJTuIejyd7AlHAggoOcSyL5fQULy9YVW54qhjRlRPNpM0FU+BSw==",
-                            PhoneNumber = "592-507-2060 x9253",
+                            Name = "Talia Walker",
+                            NormalizedEmail = "HORACE_DONNELLY@YAHOO.COM",
+                            NormalizedUserName = "HORACE_DONNELLY@YAHOO.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEN2hlXAxySyyEsa/hZw9/H0muy0/iHYRKipom8bKUd7mv4eaqnRoRinZoGUD7sW0pg==",
+                            PhoneNumber = "456.388.3190",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "332cafe7-c220-4351-866f-f279ab7b88bd",
+                            SecurityStamp = "0fa4b1a7-0403-49c9-8754-a103fcfbb2c8",
                             TwoFactorEnabled = false,
-                            UserName = "Shana.Kautzer22@hotmail.com"
+                            UserName = "Horace_Donnelly@yahoo.com"
                         },
                         new
                         {
                             Id = 5,
                             AccessFailedCount = 0,
-                            Address = "173 Donald Tunnel",
-                            ConcurrencyStamp = "1e50e93d-e1e7-4675-9eb0-5b07f11bdd69",
-                            Email = "Gilberto68@hotmail.com",
+                            Address = "37629 Brielle Expressway",
+                            ConcurrencyStamp = "c529f933-0dc3-4f98-bb4c-607e2bbad48f",
+                            Email = "Krista4@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("9a16aeaf-c0db-48c7-a4c9-af7148904620"),
                             LockoutEnabled = false,
-                            Name = "Forrest Ebert",
-                            NormalizedEmail = "GILBERTO68@HOTMAIL.COM",
-                            NormalizedUserName = "GILBERTO68@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECyPKNY0BQ8agvnMn6RoYEP4GfUobP2K6kt1IvbWadtREzvWvEyag9bzCgmCxXzo9A==",
-                            PhoneNumber = "1-312-794-5246 x207",
+                            Name = "Berta Collier",
+                            NormalizedEmail = "KRISTA4@GMAIL.COM",
+                            NormalizedUserName = "KRISTA4@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBkrpiBbYXvjlxUrR0y2jEa6+BSoThq+x1TeJYEHKmdz4o/8hw2m+rnNAvgthH1wSg==",
+                            PhoneNumber = "1-590-731-8839",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "bc348a76-91a8-4d16-88dc-e2fa782642d8",
+                            SecurityStamp = "fbf6b418-3450-4e7d-9e6e-c7a3e113692c",
                             TwoFactorEnabled = false,
-                            UserName = "Gilberto68@hotmail.com"
+                            UserName = "Krista4@gmail.com"
                         },
                         new
                         {
                             Id = 6,
                             AccessFailedCount = 0,
-                            Address = "932 Bennie Center",
-                            ConcurrencyStamp = "c24c07de-7b00-4631-9d66-e41ec1d63889",
-                            Email = "Helena32@hotmail.com",
+                            Address = "6103 Aurelie Isle",
+                            ConcurrencyStamp = "4e82b16d-331b-4276-b03f-4e9b217b7273",
+                            Email = "Kaycee.Buckridge56@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("ab002241-e0d0-4a42-8542-f8c30747982b"),
                             LockoutEnabled = false,
-                            Name = "Adolf Sanford",
-                            NormalizedEmail = "HELENA32@HOTMAIL.COM",
-                            NormalizedUserName = "HELENA32@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPdQg7nCmWOpRYXfKniltw3q5Sbp0tuCaKEi0Y93TT/rUISH36vZ0E3smODZrOPGxA==",
-                            PhoneNumber = "267.973.3355 x742",
+                            Name = "Jamar Wiegand",
+                            NormalizedEmail = "KAYCEE.BUCKRIDGE56@GMAIL.COM",
+                            NormalizedUserName = "KAYCEE.BUCKRIDGE56@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBSG44RWW0WjTQzJL4CrhSzGUF1ZS7SseveNnlMmx+JmD7lSOgSQlTIipqfl5bSf0A==",
+                            PhoneNumber = "(500) 592-1983 x3240",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "01f9b56e-4f34-4653-8b20-5ddfa9fdb9e2",
+                            SecurityStamp = "ad3474a3-832b-4a9c-9d45-b9ad5a628368",
                             TwoFactorEnabled = false,
-                            UserName = "Helena32@hotmail.com"
+                            UserName = "Kaycee.Buckridge56@gmail.com"
                         },
                         new
                         {
                             Id = 7,
                             AccessFailedCount = 0,
-                            Address = "5864 Rod Light",
-                            ConcurrencyStamp = "145f7233-f9d0-46b6-b01d-29d455e1db33",
-                            Email = "Marcel_Zieme95@hotmail.com",
+                            Address = "49588 Jeffery Causeway",
+                            ConcurrencyStamp = "bc87ab49-bd62-428b-9a22-bfe9fb8ef921",
+                            Email = "Johan4@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("56e19e8b-b83b-4d52-95f5-2731ce2d0638"),
                             LockoutEnabled = false,
-                            Name = "Connie Quitzon",
-                            NormalizedEmail = "MARCEL_ZIEME95@HOTMAIL.COM",
-                            NormalizedUserName = "MARCEL_ZIEME95@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECePmywMXOzF5+LRsEaAmhYof8KJyLbV0RFoibRSc3RqkKh7YcMx5eoPEaZNYFGazw==",
-                            PhoneNumber = "681-538-1439 x7115",
+                            Name = "Immanuel Mitchell",
+                            NormalizedEmail = "JOHAN4@GMAIL.COM",
+                            NormalizedUserName = "JOHAN4@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMsoTD4sBwFVZuA3nfNdJXVGR28RHDmLx66+smIK+PjPRo+WfQx+NfrfgpajZyNYbg==",
+                            PhoneNumber = "1-961-276-4539 x208",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3c282685-5eba-4ae9-9cfc-a0d222bbae1c",
+                            SecurityStamp = "db5b1a34-df8f-4611-940d-ba0a93a6a968",
                             TwoFactorEnabled = false,
-                            UserName = "Marcel_Zieme95@hotmail.com"
+                            UserName = "Johan4@gmail.com"
                         },
                         new
                         {
                             Id = 8,
                             AccessFailedCount = 0,
-                            Address = "10370 Huels Coves",
-                            ConcurrencyStamp = "7b9fde09-e765-4b7e-85b8-1ac50eb7e249",
-                            Email = "Travis.Gorczany@hotmail.com",
+                            Address = "7527 Dorthy Garden",
+                            ConcurrencyStamp = "41cb175f-7fb1-47ab-afe1-b0ac555a252a",
+                            Email = "Ashtyn.Tremblay39@hotmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("606698ff-4b14-4fca-be38-b14372aff76a"),
                             LockoutEnabled = false,
-                            Name = "Ivory Upton",
-                            NormalizedEmail = "TRAVIS.GORCZANY@HOTMAIL.COM",
-                            NormalizedUserName = "TRAVIS.GORCZANY@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOPnXbsq3pLg+IMQuBW32O0BJcMtYy62vjpN77Dih/z01ZgfQdWJ/qifEkMfc+g1tw==",
-                            PhoneNumber = "1-409-911-1722 x0081",
+                            Name = "Jodie Waters",
+                            NormalizedEmail = "ASHTYN.TREMBLAY39@HOTMAIL.COM",
+                            NormalizedUserName = "ASHTYN.TREMBLAY39@HOTMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMcO+/U+9CKcrH+J0tQRsEnZrQ0qMEhykexFpXidhAwOnAzlV2Rhp9irJsy9gjBdnw==",
+                            PhoneNumber = "1-765-374-7435 x4265",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "da032778-1849-494b-bf87-e7136eaa1f04",
+                            SecurityStamp = "1611f085-2ede-473f-9ff8-062f003f3158",
                             TwoFactorEnabled = false,
-                            UserName = "Travis.Gorczany@hotmail.com"
+                            UserName = "Ashtyn.Tremblay39@hotmail.com"
                         },
                         new
                         {
                             Id = 9,
                             AccessFailedCount = 0,
-                            Address = "93780 Aniyah Manors",
-                            ConcurrencyStamp = "89cd6931-fc05-4661-acea-efd81a604d58",
-                            Email = "Treva_Quitzon@hotmail.com",
+                            Address = "62350 Allie Inlet",
+                            ConcurrencyStamp = "3563a1a4-0d19-445f-8b49-e9b58922b2cd",
+                            Email = "Beth28@hotmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("7c0feafe-f7fa-4a20-8ae7-3c1d0e737703"),
                             LockoutEnabled = false,
-                            Name = "Linnie Ruecker",
-                            NormalizedEmail = "TREVA_QUITZON@HOTMAIL.COM",
-                            NormalizedUserName = "TREVA_QUITZON@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEK12w02rw9zZJNQfafiWkEMZCVi5xJOcWugCwHMOeJ3bwfH52NJ7hr0SpRvy1WP2rA==",
-                            PhoneNumber = "(347) 572-4863",
+                            Name = "Cindy Mitchell",
+                            NormalizedEmail = "BETH28@HOTMAIL.COM",
+                            NormalizedUserName = "BETH28@HOTMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDp+3dNLxEgtxCcGSVfOYo1dOd/ve3GdegGJb0X30JkUxFMJWyjx3tpRETEjN5m9Og==",
+                            PhoneNumber = "(758) 939-4746 x32963",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b047cbba-790b-429d-b842-fafcfecb905f",
+                            SecurityStamp = "fb9d3d7f-e411-4622-8045-02000c698865",
                             TwoFactorEnabled = false,
-                            UserName = "Treva_Quitzon@hotmail.com"
+                            UserName = "Beth28@hotmail.com"
                         },
                         new
                         {
                             Id = 10,
                             AccessFailedCount = 0,
-                            Address = "828 Shanahan Forges",
-                            ConcurrencyStamp = "83e67e6c-59a6-41bc-b8c9-e13cf111644c",
-                            Email = "Maribel81@gmail.com",
+                            Address = "92193 Mertz Underpass",
+                            ConcurrencyStamp = "edc77c1f-ec75-4e99-96c3-35d55ba8f4d0",
+                            Email = "Nadia.Schmidt58@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("75e786fe-dcc7-4899-ab89-463570c06e48"),
                             LockoutEnabled = false,
-                            Name = "Buck Kunde",
-                            NormalizedEmail = "MARIBEL81@GMAIL.COM",
-                            NormalizedUserName = "MARIBEL81@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPHze2UNWGJRcwV2QeBHdAatnrYOhKD9gP11EuHTMMcvxD6LGCjHrFsYw0LJhAH9kg==",
-                            PhoneNumber = "866-676-4646",
+                            Name = "Oceane Schuppe",
+                            NormalizedEmail = "NADIA.SCHMIDT58@GMAIL.COM",
+                            NormalizedUserName = "NADIA.SCHMIDT58@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPHEQrZJfS3Iug191q6KAatiFHImS5gKpIyGmrC7rYprZh7Y6PI8VpErF+y5MLh7XA==",
+                            PhoneNumber = "1-401-880-8149 x2534",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c2c879b7-dd34-4eed-8e05-8d29e2c16ced",
+                            SecurityStamp = "977e593c-b68e-4033-b413-f903fdaf4d09",
                             TwoFactorEnabled = false,
-                            UserName = "Maribel81@gmail.com"
+                            UserName = "Nadia.Schmidt58@gmail.com"
                         },
                         new
                         {
                             Id = 11,
                             AccessFailedCount = 0,
-                            Address = "362 Olson Mountain",
-                            ConcurrencyStamp = "300bba0f-08ce-48b3-93e2-0898fc3d68e6",
-                            Email = "Tiffany_Beier33@hotmail.com",
+                            Address = "440 Kling Junctions",
+                            ConcurrencyStamp = "7556f125-e33f-433e-89e9-63c793bb5548",
+                            Email = "Oran.Abbott@yahoo.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("c5e7752a-3e88-4330-84f9-25c9b2e8bcf0"),
                             LockoutEnabled = false,
-                            Name = "Myra Emard",
-                            NormalizedEmail = "TIFFANY_BEIER33@HOTMAIL.COM",
-                            NormalizedUserName = "TIFFANY_BEIER33@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIDmmHi519vkuWJLpixhI3cxhgYJtfv/5xcERXyWttNchNsbD5gICApupaD9yefcTA==",
-                            PhoneNumber = "743-762-1409",
+                            Name = "Rudy Thiel",
+                            NormalizedEmail = "ORAN.ABBOTT@YAHOO.COM",
+                            NormalizedUserName = "ORAN.ABBOTT@YAHOO.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKEVgWYCsFtaE3vnGlwnJGNFMX4GSBzN2NE5SSvNlgYamAqlbKlKS6VMmSVkOlWcHA==",
+                            PhoneNumber = "599-632-5308 x0853",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "07eb6b6d-7377-4d4c-a870-fb700863d022",
+                            SecurityStamp = "da923f6f-beca-4b5d-b2f7-24f9d9c4840d",
                             TwoFactorEnabled = false,
-                            UserName = "Tiffany_Beier33@hotmail.com"
+                            UserName = "Oran.Abbott@yahoo.com"
                         },
                         new
                         {
                             Id = 12,
                             AccessFailedCount = 0,
-                            Address = "281 Muller Turnpike",
-                            ConcurrencyStamp = "23b58b29-f1af-4f9e-b317-acfdbab1dff6",
-                            Email = "Madeline95@gmail.com",
+                            Address = "662 Medhurst Inlet",
+                            ConcurrencyStamp = "d2d5d455-b614-4103-922f-351e685fa53e",
+                            Email = "Jordane82@yahoo.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("a02e8fc9-d75d-4e64-8c9b-94720fe25f69"),
                             LockoutEnabled = false,
-                            Name = "Gregoria Mertz",
-                            NormalizedEmail = "MADELINE95@GMAIL.COM",
-                            NormalizedUserName = "MADELINE95@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEO2GQtE767vM8NsD2PaJrWjh2OKgBN6Pgl2s+6zoknee6ruHnm8+eTObxmEYnipjrQ==",
-                            PhoneNumber = "762.931.4569 x699",
+                            Name = "Johnnie Dare",
+                            NormalizedEmail = "JORDANE82@YAHOO.COM",
+                            NormalizedUserName = "JORDANE82@YAHOO.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDdSqIGdePkfeo3VAk2RWi9/NWZAwviYmJA+/1aBMPmyONSkeUJt3ImQyC/rEgxnFw==",
+                            PhoneNumber = "914.377.0483 x60823",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d8f45742-ebd6-42e2-89b7-f0b598af42cd",
+                            SecurityStamp = "7e12b3eb-f0c4-4a68-a022-cd9940b09d15",
                             TwoFactorEnabled = false,
-                            UserName = "Madeline95@gmail.com"
+                            UserName = "Jordane82@yahoo.com"
                         },
                         new
                         {
                             Id = 13,
                             AccessFailedCount = 0,
-                            Address = "7897 Antonina Knoll",
-                            ConcurrencyStamp = "04a1f758-d54d-450f-a9ee-aa5fbf962193",
-                            Email = "David.Kautzer@hotmail.com",
+                            Address = "9435 Meredith Extension",
+                            ConcurrencyStamp = "07ce447f-5210-4fbb-a81f-fe0e3b2f7481",
+                            Email = "Simone10@hotmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("dbbd9b3f-9c8f-491c-88fc-59a8f7bb782f"),
                             LockoutEnabled = false,
-                            Name = "Hunter Grimes",
-                            NormalizedEmail = "DAVID.KAUTZER@HOTMAIL.COM",
-                            NormalizedUserName = "DAVID.KAUTZER@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPFwsEwm0CSukKs4djoMn/vIDKYDf4bJpGPdgY688zYc5oM/ktlxG+GGUQNUFXROAg==",
-                            PhoneNumber = "270.842.7484 x4958",
+                            Name = "Vladimir Bruen",
+                            NormalizedEmail = "SIMONE10@HOTMAIL.COM",
+                            NormalizedUserName = "SIMONE10@HOTMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMEbaCFatHcF8nwYpNofGgaYTZWb4jiUtuzXAy12Pbg3sRYMKn556RTzKCQCFPwgAw==",
+                            PhoneNumber = "804.263.6115 x13404",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "bd7762e6-acaf-44f3-a6d8-bbacbffacf68",
+                            SecurityStamp = "f1b2b22c-834f-4c06-a6f3-982811c0f48a",
                             TwoFactorEnabled = false,
-                            UserName = "David.Kautzer@hotmail.com"
+                            UserName = "Simone10@hotmail.com"
                         },
                         new
                         {
                             Id = 14,
                             AccessFailedCount = 0,
-                            Address = "38293 Juliana Islands",
-                            ConcurrencyStamp = "0f7e0936-47b9-492c-8693-c6936645ee9a",
-                            Email = "Alexa51@yahoo.com",
+                            Address = "180 Ondricka Corner",
+                            ConcurrencyStamp = "78f80ccf-bf6f-4a4b-9b20-8affef81ba8b",
+                            Email = "Adah_Will@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("16e4ad6b-e6f7-417a-a9f1-c102e17a1767"),
                             LockoutEnabled = false,
-                            Name = "Norwood Towne",
-                            NormalizedEmail = "ALEXA51@YAHOO.COM",
-                            NormalizedUserName = "ALEXA51@YAHOO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECvf2Le1mD0yXzuQzLk04vOykGU+GrarASUVjWluSRDSZlY5ne3ClP5mme/VwYZifQ==",
-                            PhoneNumber = "1-965-272-7658 x9053",
+                            Name = "Shana Block",
+                            NormalizedEmail = "ADAH_WILL@GMAIL.COM",
+                            NormalizedUserName = "ADAH_WILL@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEE1roRzU8jOQA8zbWVVBv1CHKcH/WDiLYF0fFR51lRQZXxo01O+OTSuStyZkc4NlHQ==",
+                            PhoneNumber = "(232) 233-5168",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "42fe669f-2ca8-440a-acb4-3e4dea6f6159",
+                            SecurityStamp = "f20fc6a5-07b9-47e3-84a9-377aa7c1e3db",
                             TwoFactorEnabled = false,
-                            UserName = "Alexa51@yahoo.com"
+                            UserName = "Adah_Will@gmail.com"
                         },
                         new
                         {
                             Id = 15,
                             AccessFailedCount = 0,
-                            Address = "172 Ledner Fords",
-                            ConcurrencyStamp = "504e5ab4-57f6-4716-8754-b2d0782f2ff0",
-                            Email = "Alison79@gmail.com",
+                            Address = "5905 O'Hara Mountain",
+                            ConcurrencyStamp = "ff3d04c0-fab6-4ac4-8b09-4e6422a9ab8f",
+                            Email = "Darian.Bednar68@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("8a8c4e60-3a0b-4ffa-b5df-992852757cfe"),
                             LockoutEnabled = false,
-                            Name = "Gardner Sporer",
-                            NormalizedEmail = "ALISON79@GMAIL.COM",
-                            NormalizedUserName = "ALISON79@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEyQ/wQJZwxeifKKQLR9L3eZ4E6SAVfRBmEWAmYEzXPvKFZUncJ/Np9U4G09oYphZA==",
-                            PhoneNumber = "919.223.6317",
+                            Name = "Eveline Bradtke",
+                            NormalizedEmail = "DARIAN.BEDNAR68@GMAIL.COM",
+                            NormalizedUserName = "DARIAN.BEDNAR68@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEE4fz/RK2IvahgEFpqPFOLVZdceMPpsbPNvDwKnBItuVBJHm+YwtAMXAFPzNXpOPUQ==",
+                            PhoneNumber = "1-615-466-7684 x92491",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "80e5c970-a5c1-4f1d-a27f-0b0d562e55cd",
+                            SecurityStamp = "54921fbc-6014-49e8-a800-670bc5886f94",
                             TwoFactorEnabled = false,
-                            UserName = "Alison79@gmail.com"
+                            UserName = "Darian.Bednar68@gmail.com"
                         },
                         new
                         {
                             Id = 16,
                             AccessFailedCount = 0,
-                            Address = "685 Jast Cliffs",
-                            ConcurrencyStamp = "f62e2175-3a18-41dc-8b1c-162f0799fe1a",
-                            Email = "Jazlyn_Considine67@hotmail.com",
+                            Address = "39530 Adan Mills",
+                            ConcurrencyStamp = "4685eaa9-57cf-4e77-bb12-9c8f9db30871",
+                            Email = "Marcelino.Koch84@yahoo.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("c83e6913-2d58-4c8f-971f-2fda26b6b8e9"),
                             LockoutEnabled = false,
-                            Name = "Betty Lueilwitz",
-                            NormalizedEmail = "JAZLYN_CONSIDINE67@HOTMAIL.COM",
-                            NormalizedUserName = "JAZLYN_CONSIDINE67@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMwi9o93JVDR/qqqPY1wuNQp9hi6wtywt/MSmgYMP3terbU4F96Qhq+Z4HBQDXHGLg==",
-                            PhoneNumber = "1-697-884-8725 x313",
+                            Name = "Leon Swift",
+                            NormalizedEmail = "MARCELINO.KOCH84@YAHOO.COM",
+                            NormalizedUserName = "MARCELINO.KOCH84@YAHOO.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEG8ZBUpij/MehuZIl0y6er3SYkBfkqQBjyNXsk2zocG6IohmaWCJW9hEd/auFVwcdQ==",
+                            PhoneNumber = "988.706.8383 x875",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d3858672-b5bd-4e40-b79a-3f2fa2e81600",
+                            SecurityStamp = "a4edbc4a-c500-460c-89cc-b85b6fa4c3c2",
                             TwoFactorEnabled = false,
-                            UserName = "Jazlyn_Considine67@hotmail.com"
+                            UserName = "Marcelino.Koch84@yahoo.com"
                         },
                         new
                         {
                             Id = 17,
                             AccessFailedCount = 0,
-                            Address = "063 Quitzon Junction",
-                            ConcurrencyStamp = "814d47d4-9e86-4d91-87fd-c8d1562da2e0",
-                            Email = "Elenora71@yahoo.com",
+                            Address = "59515 Rigoberto Island",
+                            ConcurrencyStamp = "c13ecf55-cdd0-4a56-a8cb-4fad7d421813",
+                            Email = "Helene_Kohler@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("35a6209f-3f8f-446b-8ce4-09e2b718666d"),
                             LockoutEnabled = false,
-                            Name = "Emerald Hoppe",
-                            NormalizedEmail = "ELENORA71@YAHOO.COM",
-                            NormalizedUserName = "ELENORA71@YAHOO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEP+e+OM3fCWP/C8i/giJBAJwiEO7oXp20n4nBiebm3dYXyRhV/CkdHeMVcU0JhhLRw==",
-                            PhoneNumber = "565.535.9196 x003",
+                            Name = "Bernard Weimann",
+                            NormalizedEmail = "HELENE_KOHLER@GMAIL.COM",
+                            NormalizedUserName = "HELENE_KOHLER@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHqnKqBwAwuEYUELOSLCyzS9J6qyeigLq/wgYvnQ2iugW+TuWizkekX7X3+ZsOIdng==",
+                            PhoneNumber = "951.356.8368 x1175",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f4e08588-3bd2-4f77-891f-7b07963e6836",
+                            SecurityStamp = "5a8d0f15-aecd-4092-8e23-12a46fbdd1ba",
                             TwoFactorEnabled = false,
-                            UserName = "Elenora71@yahoo.com"
+                            UserName = "Helene_Kohler@gmail.com"
                         },
                         new
                         {
                             Id = 18,
                             AccessFailedCount = 0,
-                            Address = "309 Nona Common",
-                            ConcurrencyStamp = "ac0d1f18-86d2-414d-a1b7-99cf7f4a1940",
-                            Email = "Taurean_Crona80@gmail.com",
+                            Address = "822 Roob Stream",
+                            ConcurrencyStamp = "3dd6c573-fdfd-4508-957c-6ed997a57186",
+                            Email = "Hubert51@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("abc31af5-ba57-4bf8-a43f-23b46017dd3a"),
                             LockoutEnabled = false,
-                            Name = "Susan Bahringer",
-                            NormalizedEmail = "TAUREAN_CRONA80@GMAIL.COM",
-                            NormalizedUserName = "TAUREAN_CRONA80@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEI+K73Fwra1gpQ6a+WT6X1X88ioBJAquKdb9jrWQKLzqm0JsQpqflR0vFteMVb7yNg==",
-                            PhoneNumber = "882.235.9884 x693",
+                            Name = "Jaden McLaughlin",
+                            NormalizedEmail = "HUBERT51@GMAIL.COM",
+                            NormalizedUserName = "HUBERT51@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEADl+mGimBp0Ld/ut/WEncGt5smJ4VD9/jVev2REF4L+uEx8e784s8lX3kwHp58urQ==",
+                            PhoneNumber = "563.732.3271",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "52bf44a0-1cdd-4792-a5a6-146bc536e6d5",
+                            SecurityStamp = "fce0cb92-fa1c-4de2-97b2-eaa0ede13301",
                             TwoFactorEnabled = false,
-                            UserName = "Taurean_Crona80@gmail.com"
+                            UserName = "Hubert51@gmail.com"
                         },
                         new
                         {
                             Id = 19,
                             AccessFailedCount = 0,
-                            Address = "4938 Erdman Camp",
-                            ConcurrencyStamp = "4453198e-2184-490b-8d69-191f742205b2",
-                            Email = "Milan93@yahoo.com",
+                            Address = "6850 Vita Prairie",
+                            ConcurrencyStamp = "a032cf93-5a7f-40ed-ae58-3336455f1817",
+                            Email = "Ali.Parisian35@hotmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("52db1c36-52f0-440e-98f4-db9974e723cc"),
                             LockoutEnabled = false,
-                            Name = "Gerhard Witting",
-                            NormalizedEmail = "MILAN93@YAHOO.COM",
-                            NormalizedUserName = "MILAN93@YAHOO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJ8bNk7gG/NBQ4cMO2jXHYVEiQH5CY8OXRa4/ChWgzZIZq6BqKaMcbEKqVH0myAlaw==",
-                            PhoneNumber = "(329) 519-1288",
+                            Name = "Marisol O'Conner",
+                            NormalizedEmail = "ALI.PARISIAN35@HOTMAIL.COM",
+                            NormalizedUserName = "ALI.PARISIAN35@HOTMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOdo62K2xA4JlJA245lKQYHRzqzhbj4SWRymv5pfpMkb9LlGvE5Z3+KFAbUvwPaHeA==",
+                            PhoneNumber = "620-461-0211",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8437982c-80eb-4f5c-b5bb-d899b127e1fe",
+                            SecurityStamp = "d1733e39-5e85-47f6-8455-0319a4105619",
                             TwoFactorEnabled = false,
-                            UserName = "Milan93@yahoo.com"
+                            UserName = "Ali.Parisian35@hotmail.com"
                         },
                         new
                         {
                             Id = 20,
                             AccessFailedCount = 0,
-                            Address = "71082 Paucek Rapids",
-                            ConcurrencyStamp = "ba1b8a48-7d88-4da6-bb7a-0171fc6834d7",
-                            Email = "Colleen14@yahoo.com",
+                            Address = "25327 Steuber Tunnel",
+                            ConcurrencyStamp = "52ac2269-85b4-4065-8f7c-fde406d0d1cb",
+                            Email = "Alene.Reinger6@yahoo.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("75b74ed7-5a25-48c1-8e81-609eafd5b09a"),
                             LockoutEnabled = false,
-                            Name = "Mac Jacobs",
-                            NormalizedEmail = "COLLEEN14@YAHOO.COM",
-                            NormalizedUserName = "COLLEEN14@YAHOO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOiEhkYsbPxMEUH1VIApDlJGmEjXkLZDYpG6qNgAcGJ8DM97qc2L3RIYOIDpinCcog==",
-                            PhoneNumber = "571-478-2017",
+                            Name = "Brendon Howell",
+                            NormalizedEmail = "ALENE.REINGER6@YAHOO.COM",
+                            NormalizedUserName = "ALENE.REINGER6@YAHOO.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAELzSIiiIvbSKZW/j6eWpWN0GIFUCrxLl37efQ7pWbJtwyVgTBX40MGOLjGvPhVqI6Q==",
+                            PhoneNumber = "(336) 327-7278 x5382",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1ecd4621-50f1-4893-a425-6b6adcbddb5b",
+                            SecurityStamp = "18dfa3ef-1772-4605-b26a-a350e5a6a4d4",
                             TwoFactorEnabled = false,
-                            UserName = "Colleen14@yahoo.com"
+                            UserName = "Alene.Reinger6@yahoo.com"
                         },
                         new
                         {
                             Id = 21,
                             AccessFailedCount = 0,
-                            Address = "48479 Moore Flats",
-                            ConcurrencyStamp = "451e1e2e-a907-423d-b6eb-5cce271ba90e",
-                            Email = "Brycen26@yahoo.com",
+                            Address = "1935 Macejkovic Parkway",
+                            ConcurrencyStamp = "e2d19ac2-4833-4b3a-9eac-caea5d26edff",
+                            Email = "Darby.Tremblay@gmail.com",
                             EmailConfirmed = true,
-                            LibraryCardId = new Guid("7e5c6a48-d89b-4d42-a99b-2c3eea90bc05"),
                             LockoutEnabled = false,
-                            Name = "Claire Brekke",
-                            NormalizedEmail = "BRYCEN26@YAHOO.COM",
-                            NormalizedUserName = "BRYCEN26@YAHOO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAELF4FoNC/F+Zoy87DWBMh/sfm8adnHSEMeg+bmLjmPfv4MNvpi/HoaGGyAYz0t1GlA==",
-                            PhoneNumber = "1-509-405-6563",
+                            Name = "Raegan Johns",
+                            NormalizedEmail = "DARBY.TREMBLAY@GMAIL.COM",
+                            NormalizedUserName = "DARBY.TREMBLAY@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFLGa1JLzxjfdwNoZQ2oWr3F9AW4duP9q3V+hZzm1rMCclshTcXf7krLcRawjZ3NpQ==",
+                            PhoneNumber = "(270) 939-6412 x205",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e4c2a85d-dc7a-4c11-8493-6f4e231a4a49",
+                            SecurityStamp = "ca7051c2-1412-4e69-82a3-57f5833b99d3",
                             TwoFactorEnabled = false,
-                            UserName = "Brycen26@yahoo.com"
+                            UserName = "Darby.Tremblay@gmail.com"
                         });
                 });
 
@@ -532,19 +507,19 @@ namespace LibraryMVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("BorrowDate")
+                    b.Property<DateTime?>("BorrowDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("BorrowerId")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("LibraryCardId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<DateTime?>("DueDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("LibraryItemId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("ReturnDate")
+                    b.Property<DateTime?>("ReturnDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("Status")
@@ -552,7 +527,7 @@ namespace LibraryMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LibraryCardId");
+                    b.HasIndex("BorrowerId");
 
                     b.HasIndex("LibraryItemId");
 
@@ -562,252 +537,227 @@ namespace LibraryMVC.Migrations
                         new
                         {
                             Id = 1,
-                            BorrowDate = new DateTime(2022, 3, 15, 8, 9, 21, 487, DateTimeKind.Local).AddTicks(1588),
-                            DueDate = new DateTime(2022, 3, 25, 8, 9, 21, 487, DateTimeKind.Local).AddTicks(1588),
-                            LibraryCardId = new Guid("75e786fe-dcc7-4899-ab89-463570c06e48"),
-                            LibraryItemId = 6,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BorrowDate = new DateTime(2022, 2, 16, 20, 23, 21, 433, DateTimeKind.Local).AddTicks(9691),
-                            DueDate = new DateTime(2022, 3, 16, 20, 23, 21, 433, DateTimeKind.Local).AddTicks(9691),
-                            LibraryCardId = new Guid("52db1c36-52f0-440e-98f4-db9974e723cc"),
-                            LibraryItemId = 33,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 3
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BorrowDate = new DateTime(2021, 2, 23, 15, 55, 45, 16, DateTimeKind.Local).AddTicks(7446),
-                            DueDate = new DateTime(2021, 3, 9, 15, 55, 45, 16, DateTimeKind.Local).AddTicks(7446),
-                            LibraryCardId = new Guid("08fb96d4-e236-40ea-aac3-6ba468e9ef0f"),
-                            LibraryItemId = 21,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 3
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BorrowDate = new DateTime(2022, 3, 14, 11, 22, 58, 549, DateTimeKind.Local).AddTicks(3496),
-                            DueDate = new DateTime(2022, 3, 30, 11, 22, 58, 549, DateTimeKind.Local).AddTicks(3496),
-                            LibraryCardId = new Guid("a7979d46-e381-4e03-8d8c-de9e5d6b5493"),
-                            LibraryItemId = 21,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2021, 5, 27, 13, 25, 29, 234, DateTimeKind.Local).AddTicks(3815),
+                            BorrowerId = 15,
+                            DueDate = new DateTime(2021, 6, 6, 13, 25, 29, 234, DateTimeKind.Local).AddTicks(3815),
+                            LibraryItemId = 39,
                             Status = 0
                         },
                         new
                         {
+                            Id = 2,
+                            BorrowDate = new DateTime(2021, 11, 28, 14, 20, 28, 833, DateTimeKind.Local).AddTicks(9266),
+                            BorrowerId = 20,
+                            DueDate = new DateTime(2021, 12, 13, 14, 20, 28, 833, DateTimeKind.Local).AddTicks(9266),
+                            LibraryItemId = 33,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            BorrowDate = new DateTime(2021, 7, 2, 9, 1, 57, 882, DateTimeKind.Local).AddTicks(8912),
+                            BorrowerId = 14,
+                            DueDate = new DateTime(2021, 7, 17, 9, 1, 57, 882, DateTimeKind.Local).AddTicks(8912),
+                            LibraryItemId = 26,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BorrowDate = new DateTime(2022, 2, 15, 22, 36, 10, 621, DateTimeKind.Local).AddTicks(4504),
+                            BorrowerId = 3,
+                            DueDate = new DateTime(2022, 2, 28, 22, 36, 10, 621, DateTimeKind.Local).AddTicks(4504),
+                            LibraryItemId = 18,
+                            Status = 3
+                        },
+                        new
+                        {
                             Id = 5,
-                            BorrowDate = new DateTime(2022, 10, 7, 2, 55, 55, 749, DateTimeKind.Local).AddTicks(6748),
-                            DueDate = new DateTime(2022, 10, 24, 2, 55, 55, 749, DateTimeKind.Local).AddTicks(6748),
-                            LibraryCardId = new Guid("51a9193e-bab3-4470-b4e0-cb58e064be55"),
-                            LibraryItemId = 10,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 2
+                            BorrowDate = new DateTime(2022, 8, 1, 13, 32, 54, 893, DateTimeKind.Local).AddTicks(9084),
+                            BorrowerId = 9,
+                            DueDate = new DateTime(2022, 8, 13, 13, 32, 54, 893, DateTimeKind.Local).AddTicks(9084),
+                            LibraryItemId = 38,
+                            Status = 1
                         },
                         new
                         {
                             Id = 6,
-                            BorrowDate = new DateTime(2022, 11, 3, 2, 55, 55, 749, DateTimeKind.Local).AddTicks(6748),
-                            DueDate = new DateTime(2022, 11, 16, 2, 55, 55, 749, DateTimeKind.Local).AddTicks(6748),
-                            LibraryCardId = new Guid("9a16aeaf-c0db-48c7-a4c9-af7148904620"),
-                            LibraryItemId = 11,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2021, 12, 7, 4, 51, 10, 355, DateTimeKind.Local).AddTicks(8755),
+                            BorrowerId = 20,
+                            DueDate = new DateTime(2021, 12, 25, 4, 51, 10, 355, DateTimeKind.Local).AddTicks(8755),
+                            LibraryItemId = 31,
                             Status = 1
                         },
                         new
                         {
                             Id = 7,
-                            BorrowDate = new DateTime(2022, 3, 25, 8, 9, 21, 487, DateTimeKind.Local).AddTicks(1588),
-                            DueDate = new DateTime(2022, 4, 15, 8, 9, 21, 487, DateTimeKind.Local).AddTicks(1588),
-                            LibraryCardId = new Guid("35a6209f-3f8f-446b-8ce4-09e2b718666d"),
-                            LibraryItemId = 33,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2022, 4, 12, 17, 53, 28, 961, DateTimeKind.Local).AddTicks(1814),
+                            BorrowerId = 5,
+                            DueDate = new DateTime(2022, 5, 4, 17, 53, 28, 961, DateTimeKind.Local).AddTicks(1814),
+                            LibraryItemId = 30,
                             Status = 3
                         },
                         new
                         {
                             Id = 8,
-                            BorrowDate = new DateTime(2021, 5, 6, 11, 18, 20, 900, DateTimeKind.Local).AddTicks(9897),
-                            DueDate = new DateTime(2021, 5, 17, 11, 18, 20, 900, DateTimeKind.Local).AddTicks(9897),
-                            LibraryCardId = new Guid("dbbd9b3f-9c8f-491c-88fc-59a8f7bb782f"),
-                            LibraryItemId = 19,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 2
+                            BorrowDate = new DateTime(2021, 9, 5, 10, 59, 58, 781, DateTimeKind.Local).AddTicks(4340),
+                            BorrowerId = 17,
+                            DueDate = new DateTime(2021, 10, 3, 10, 59, 58, 781, DateTimeKind.Local).AddTicks(4340),
+                            LibraryItemId = 36,
+                            Status = 0
                         },
                         new
                         {
                             Id = 9,
-                            BorrowDate = new DateTime(2021, 1, 14, 0, 29, 2, 284, DateTimeKind.Local).AddTicks(7173),
-                            DueDate = new DateTime(2021, 2, 5, 0, 29, 2, 284, DateTimeKind.Local).AddTicks(7173),
-                            LibraryCardId = new Guid("35a6209f-3f8f-446b-8ce4-09e2b718666d"),
-                            LibraryItemId = 17,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 3
-                        },
-                        new
-                        {
-                            Id = 10,
-                            BorrowDate = new DateTime(2022, 1, 23, 16, 58, 34, 332, DateTimeKind.Local).AddTicks(9387),
-                            DueDate = new DateTime(2022, 2, 11, 16, 58, 34, 332, DateTimeKind.Local).AddTicks(9387),
-                            LibraryCardId = new Guid("606698ff-4b14-4fca-be38-b14372aff76a"),
-                            LibraryItemId = 33,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2021, 4, 7, 11, 57, 13, 146, DateTimeKind.Local).AddTicks(1974),
+                            BorrowerId = 10,
+                            DueDate = new DateTime(2021, 5, 5, 11, 57, 13, 146, DateTimeKind.Local).AddTicks(1974),
+                            LibraryItemId = 32,
                             Status = 1
                         },
                         new
                         {
+                            Id = 10,
+                            BorrowDate = new DateTime(2022, 9, 8, 22, 57, 30, 794, DateTimeKind.Local).AddTicks(5962),
+                            BorrowerId = 9,
+                            DueDate = new DateTime(2022, 9, 24, 22, 57, 30, 794, DateTimeKind.Local).AddTicks(5962),
+                            LibraryItemId = 33,
+                            Status = 0
+                        },
+                        new
+                        {
                             Id = 11,
-                            BorrowDate = new DateTime(2022, 8, 4, 17, 18, 2, 249, DateTimeKind.Local).AddTicks(3616),
-                            DueDate = new DateTime(2022, 8, 22, 17, 18, 2, 249, DateTimeKind.Local).AddTicks(3616),
-                            LibraryCardId = new Guid("a7979d46-e381-4e03-8d8c-de9e5d6b5493"),
-                            LibraryItemId = 16,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 3
+                            BorrowDate = new DateTime(2021, 12, 24, 7, 12, 14, 884, DateTimeKind.Local).AddTicks(1530),
+                            BorrowerId = 2,
+                            DueDate = new DateTime(2022, 1, 20, 7, 12, 14, 884, DateTimeKind.Local).AddTicks(1530),
+                            LibraryItemId = 32,
+                            Status = 2
                         },
                         new
                         {
                             Id = 12,
-                            BorrowDate = new DateTime(2022, 12, 24, 0, 4, 15, 672, DateTimeKind.Local).AddTicks(3828),
-                            DueDate = new DateTime(2023, 1, 6, 0, 4, 15, 672, DateTimeKind.Local).AddTicks(3828),
-                            LibraryCardId = new Guid("7e5c6a48-d89b-4d42-a99b-2c3eea90bc05"),
-                            LibraryItemId = 34,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2022, 4, 13, 1, 23, 54, 964, DateTimeKind.Local).AddTicks(5552),
+                            BorrowerId = 19,
+                            DueDate = new DateTime(2022, 4, 24, 1, 23, 54, 964, DateTimeKind.Local).AddTicks(5552),
+                            LibraryItemId = 17,
                             Status = 0
                         },
                         new
                         {
                             Id = 13,
-                            BorrowDate = new DateTime(2021, 7, 14, 12, 45, 53, 372, DateTimeKind.Local).AddTicks(8777),
-                            DueDate = new DateTime(2021, 8, 4, 12, 45, 53, 372, DateTimeKind.Local).AddTicks(8777),
-                            LibraryCardId = new Guid("52db1c36-52f0-440e-98f4-db9974e723cc"),
-                            LibraryItemId = 12,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 0
+                            BorrowDate = new DateTime(2022, 6, 24, 1, 21, 52, 532, DateTimeKind.Local).AddTicks(763),
+                            BorrowerId = 15,
+                            DueDate = new DateTime(2022, 7, 7, 1, 21, 52, 532, DateTimeKind.Local).AddTicks(763),
+                            LibraryItemId = 27,
+                            Status = 2
                         },
                         new
                         {
                             Id = 14,
-                            BorrowDate = new DateTime(2021, 1, 25, 7, 45, 48, 119, DateTimeKind.Local).AddTicks(289),
-                            DueDate = new DateTime(2021, 2, 21, 7, 45, 48, 119, DateTimeKind.Local).AddTicks(289),
-                            LibraryCardId = new Guid("51a9193e-bab3-4470-b4e0-cb58e064be55"),
-                            LibraryItemId = 7,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1
+                            BorrowDate = new DateTime(2022, 4, 3, 22, 59, 30, 999, DateTimeKind.Local).AddTicks(6342),
+                            BorrowerId = 19,
+                            DueDate = new DateTime(2022, 4, 29, 22, 59, 30, 999, DateTimeKind.Local).AddTicks(6342),
+                            LibraryItemId = 33,
+                            Status = 0
                         },
                         new
                         {
                             Id = 15,
-                            BorrowDate = new DateTime(2022, 2, 8, 16, 58, 34, 332, DateTimeKind.Local).AddTicks(9387),
-                            DueDate = new DateTime(2022, 2, 26, 16, 58, 34, 332, DateTimeKind.Local).AddTicks(9387),
-                            LibraryCardId = new Guid("52db1c36-52f0-440e-98f4-db9974e723cc"),
-                            LibraryItemId = 3,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2021, 10, 3, 13, 6, 56, 175, DateTimeKind.Local).AddTicks(6185),
+                            BorrowerId = 20,
+                            DueDate = new DateTime(2021, 10, 19, 13, 6, 56, 175, DateTimeKind.Local).AddTicks(6185),
+                            LibraryItemId = 7,
                             Status = 3
                         },
                         new
                         {
                             Id = 16,
-                            BorrowDate = new DateTime(2022, 8, 2, 0, 20, 56, 283, DateTimeKind.Local).AddTicks(8119),
-                            DueDate = new DateTime(2022, 8, 19, 0, 20, 56, 283, DateTimeKind.Local).AddTicks(8119),
-                            LibraryCardId = new Guid("75e786fe-dcc7-4899-ab89-463570c06e48"),
-                            LibraryItemId = 32,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 3
+                            BorrowDate = new DateTime(2021, 3, 14, 11, 57, 13, 146, DateTimeKind.Local).AddTicks(1974),
+                            BorrowerId = 8,
+                            DueDate = new DateTime(2021, 3, 28, 11, 57, 13, 146, DateTimeKind.Local).AddTicks(1974),
+                            LibraryItemId = 31,
+                            Status = 0
                         },
                         new
                         {
                             Id = 17,
-                            BorrowDate = new DateTime(2022, 3, 30, 11, 22, 58, 549, DateTimeKind.Local).AddTicks(3496),
-                            DueDate = new DateTime(2022, 4, 10, 11, 22, 58, 549, DateTimeKind.Local).AddTicks(3496),
-                            LibraryCardId = new Guid("c83e6913-2d58-4c8f-971f-2fda26b6b8e9"),
-                            LibraryItemId = 40,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2021, 8, 18, 4, 4, 47, 491, DateTimeKind.Local).AddTicks(2686),
+                            BorrowerId = 20,
+                            DueDate = new DateTime(2021, 9, 2, 4, 4, 47, 491, DateTimeKind.Local).AddTicks(2686),
+                            LibraryItemId = 15,
                             Status = 2
                         },
                         new
                         {
                             Id = 18,
-                            BorrowDate = new DateTime(2021, 7, 27, 12, 45, 53, 372, DateTimeKind.Local).AddTicks(8777),
-                            DueDate = new DateTime(2021, 8, 16, 12, 45, 53, 372, DateTimeKind.Local).AddTicks(8777),
-                            LibraryCardId = new Guid("a02e8fc9-d75d-4e64-8c9b-94720fe25f69"),
-                            LibraryItemId = 6,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2022, 1, 23, 22, 36, 10, 621, DateTimeKind.Local).AddTicks(4504),
+                            BorrowerId = 11,
+                            DueDate = new DateTime(2022, 2, 3, 22, 36, 10, 621, DateTimeKind.Local).AddTicks(4504),
+                            LibraryItemId = 30,
                             Status = 0
                         },
                         new
                         {
                             Id = 19,
-                            BorrowDate = new DateTime(2022, 7, 15, 17, 18, 2, 249, DateTimeKind.Local).AddTicks(3616),
-                            DueDate = new DateTime(2022, 8, 12, 17, 18, 2, 249, DateTimeKind.Local).AddTicks(3616),
-                            LibraryCardId = new Guid("a02e8fc9-d75d-4e64-8c9b-94720fe25f69"),
-                            LibraryItemId = 27,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 20,
-                            BorrowDate = new DateTime(2021, 12, 6, 13, 57, 53, 67, DateTimeKind.Local).AddTicks(4528),
-                            DueDate = new DateTime(2021, 12, 23, 13, 57, 53, 67, DateTimeKind.Local).AddTicks(4528),
-                            LibraryCardId = new Guid("35a6209f-3f8f-446b-8ce4-09e2b718666d"),
-                            LibraryItemId = 36,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2022, 6, 30, 19, 11, 27, 699, DateTimeKind.Local).AddTicks(5999),
+                            BorrowerId = 3,
+                            DueDate = new DateTime(2022, 7, 16, 19, 11, 27, 699, DateTimeKind.Local).AddTicks(5999),
+                            LibraryItemId = 26,
                             Status = 2
                         },
                         new
                         {
+                            Id = 20,
+                            BorrowDate = new DateTime(2022, 9, 10, 22, 57, 30, 794, DateTimeKind.Local).AddTicks(5962),
+                            BorrowerId = 21,
+                            DueDate = new DateTime(2022, 10, 5, 22, 57, 30, 794, DateTimeKind.Local).AddTicks(5962),
+                            LibraryItemId = 33,
+                            Status = 0
+                        },
+                        new
+                        {
                             Id = 21,
-                            BorrowDate = new DateTime(2022, 5, 22, 20, 31, 8, 486, DateTimeKind.Local).AddTicks(3151),
-                            DueDate = new DateTime(2022, 6, 7, 20, 31, 8, 486, DateTimeKind.Local).AddTicks(3151),
-                            LibraryCardId = new Guid("a02e8fc9-d75d-4e64-8c9b-94720fe25f69"),
-                            LibraryItemId = 12,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1
+                            BorrowDate = new DateTime(2021, 1, 31, 10, 31, 5, 835, DateTimeKind.Local).AddTicks(2446),
+                            BorrowerId = 3,
+                            DueDate = new DateTime(2021, 2, 18, 10, 31, 5, 835, DateTimeKind.Local).AddTicks(2446),
+                            LibraryItemId = 5,
+                            Status = 0
                         },
                         new
                         {
                             Id = 22,
-                            BorrowDate = new DateTime(2021, 1, 19, 0, 29, 2, 284, DateTimeKind.Local).AddTicks(7173),
-                            DueDate = new DateTime(2021, 2, 11, 0, 29, 2, 284, DateTimeKind.Local).AddTicks(7173),
-                            LibraryCardId = new Guid("a02e8fc9-d75d-4e64-8c9b-94720fe25f69"),
-                            LibraryItemId = 5,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowDate = new DateTime(2022, 8, 28, 13, 32, 54, 893, DateTimeKind.Local).AddTicks(9084),
+                            BorrowerId = 2,
+                            DueDate = new DateTime(2022, 9, 19, 13, 32, 54, 893, DateTimeKind.Local).AddTicks(9084),
+                            LibraryItemId = 39,
                             Status = 3
                         },
                         new
                         {
                             Id = 23,
-                            BorrowDate = new DateTime(2021, 10, 19, 15, 57, 19, 914, DateTimeKind.Local).AddTicks(3183),
-                            DueDate = new DateTime(2021, 11, 5, 15, 57, 19, 914, DateTimeKind.Local).AddTicks(3183),
-                            LibraryCardId = new Guid("16e4ad6b-e6f7-417a-a9f1-c102e17a1767"),
-                            LibraryItemId = 17,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 0
+                            BorrowDate = new DateTime(2021, 10, 15, 13, 6, 56, 175, DateTimeKind.Local).AddTicks(6185),
+                            BorrowerId = 19,
+                            DueDate = new DateTime(2021, 11, 9, 13, 6, 56, 175, DateTimeKind.Local).AddTicks(6185),
+                            LibraryItemId = 28,
+                            Status = 1
                         },
                         new
                         {
                             Id = 24,
-                            BorrowDate = new DateTime(2021, 9, 18, 12, 28, 48, 1, DateTimeKind.Local).AddTicks(8346),
-                            DueDate = new DateTime(2021, 10, 12, 12, 28, 48, 1, DateTimeKind.Local).AddTicks(8346),
-                            LibraryCardId = new Guid("606698ff-4b14-4fca-be38-b14372aff76a"),
-                            LibraryItemId = 23,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 2
+                            BorrowDate = new DateTime(2022, 4, 28, 1, 23, 54, 964, DateTimeKind.Local).AddTicks(5552),
+                            BorrowerId = 11,
+                            DueDate = new DateTime(2022, 5, 10, 1, 23, 54, 964, DateTimeKind.Local).AddTicks(5552),
+                            LibraryItemId = 13,
+                            Status = 1
                         },
                         new
                         {
                             Id = 25,
-                            BorrowDate = new DateTime(2022, 5, 27, 20, 59, 31, 904, DateTimeKind.Local).AddTicks(2298),
-                            DueDate = new DateTime(2022, 6, 21, 20, 59, 31, 904, DateTimeKind.Local).AddTicks(2298),
-                            LibraryCardId = new Guid("35a6209f-3f8f-446b-8ce4-09e2b718666d"),
-                            LibraryItemId = 16,
-                            ReturnDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 0
+                            BorrowDate = new DateTime(2022, 10, 26, 17, 6, 17, 33, DateTimeKind.Local).AddTicks(1108),
+                            BorrowerId = 11,
+                            DueDate = new DateTime(2022, 11, 23, 17, 6, 17, 33, DateTimeKind.Local).AddTicks(1108),
+                            LibraryItemId = 15,
+                            Status = 1
                         });
                 });
 
@@ -1114,129 +1064,111 @@ namespace LibraryMVC.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            Author = "Derick Roob",
-                            PublicationDate = new DateTime(2022, 8, 15, 2, 55, 55, 749, DateTimeKind.Local).AddTicks(6748),
-                            Quantity = 5,
-                            Title = "Non nemo et quasi.",
-                            NumberOfPages = 99
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Author = "Adella Ratke",
-                            PublicationDate = new DateTime(2020, 12, 15, 3, 18, 40, 609, DateTimeKind.Local).AddTicks(8442),
-                            Quantity = 5,
-                            Title = "Iure magnam adipisci fugit.",
-                            NumberOfPages = 84
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Author = "Mack Zieme",
-                            PublicationDate = new DateTime(2022, 5, 23, 23, 42, 52, 984, DateTimeKind.Local).AddTicks(4690),
-                            Quantity = 8,
-                            Title = "Possimus rerum doloribus est.",
-                            NumberOfPages = 108
+                            Id = 3,
+                            Author = "Margret O'Keefe",
+                            PublicationDate = new DateTime(2021, 10, 4, 14, 20, 28, 833, DateTimeKind.Local).AddTicks(9266),
+                            Quantity = 9,
+                            Title = "Saepe et nam error.",
+                            NumberOfPages = 136
                         },
                         new
                         {
                             Id = 7,
-                            Author = "Houston Glover",
-                            PublicationDate = new DateTime(2021, 11, 16, 0, 50, 5, 403, DateTimeKind.Local).AddTicks(9421),
-                            Quantity = 10,
-                            Title = "Cum placeat non dignissimos.",
-                            NumberOfPages = 57
+                            Author = "Raul Runte",
+                            PublicationDate = new DateTime(2021, 9, 12, 4, 51, 10, 355, DateTimeKind.Local).AddTicks(8755),
+                            Quantity = 7,
+                            Title = "Mollitia sed similique sed.",
+                            NumberOfPages = 74
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Author = "Alanis Hahn",
+                            PublicationDate = new DateTime(2022, 5, 24, 13, 24, 49, 698, DateTimeKind.Local).AddTicks(3409),
+                            Quantity = 7,
+                            Title = "Excepturi quos quia dolores.",
+                            NumberOfPages = 60
                         },
                         new
                         {
                             Id = 14,
-                            Author = "Eula Heaney",
-                            PublicationDate = new DateTime(2021, 9, 26, 1, 34, 22, 217, DateTimeKind.Local).AddTicks(9948),
-                            Quantity = 8,
-                            Title = "Porro quae fuga aut.",
+                            Author = "Ned Hauck",
+                            PublicationDate = new DateTime(2021, 11, 14, 22, 36, 10, 621, DateTimeKind.Local).AddTicks(4504),
+                            Quantity = 9,
+                            Title = "Suscipit dolor quia at.",
+                            NumberOfPages = 122
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Author = "Jay Pacocha",
+                            PublicationDate = new DateTime(2022, 1, 13, 17, 53, 28, 961, DateTimeKind.Local).AddTicks(1814),
+                            Quantity = 7,
+                            Title = "Assumenda maxime repellat voluptatem.",
+                            NumberOfPages = 117
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Author = "Addison Shields",
+                            PublicationDate = new DateTime(2021, 8, 30, 15, 7, 30, 156, DateTimeKind.Local).AddTicks(1972),
+                            Quantity = 10,
+                            Title = "Impedit iure et sed.",
                             NumberOfPages = 98
                         },
                         new
                         {
-                            Id = 15,
-                            Author = "Travon Streich",
-                            PublicationDate = new DateTime(2022, 6, 15, 16, 8, 49, 550, DateTimeKind.Local).AddTicks(1454),
-                            Quantity = 5,
-                            Title = "Nihil est aut et.",
-                            NumberOfPages = 96
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Author = "Jailyn Swift",
-                            PublicationDate = new DateTime(2021, 11, 13, 21, 49, 26, 731, DateTimeKind.Local).AddTicks(9230),
-                            Quantity = 7,
-                            Title = "Repudiandae quam asperiores qui.",
-                            NumberOfPages = 79
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Author = "Frederik Schoen",
-                            PublicationDate = new DateTime(2022, 8, 6, 7, 11, 57, 875, DateTimeKind.Local).AddTicks(7948),
-                            Quantity = 10,
-                            Title = "Ea enim rerum officia.",
-                            NumberOfPages = 63
-                        },
-                        new
-                        {
-                            Id = 22,
-                            Author = "Sherwood McKenzie",
-                            PublicationDate = new DateTime(2022, 5, 6, 17, 18, 2, 249, DateTimeKind.Local).AddTicks(3616),
-                            Quantity = 7,
-                            Title = "Molestiae quia quia quia.",
-                            NumberOfPages = 134
-                        },
-                        new
-                        {
                             Id = 26,
-                            Author = "Amaya MacGyver",
-                            PublicationDate = new DateTime(2021, 11, 1, 16, 58, 34, 332, DateTimeKind.Local).AddTicks(9387),
-                            Quantity = 7,
-                            Title = "Similique ullam minima nisi.",
-                            NumberOfPages = 86
+                            Author = "Sandra Bernier",
+                            PublicationDate = new DateTime(2020, 12, 6, 10, 31, 5, 835, DateTimeKind.Local).AddTicks(2446),
+                            Quantity = 10,
+                            Title = "Deleniti excepturi et tenetur.",
+                            NumberOfPages = 71
                         },
                         new
                         {
-                            Id = 30,
-                            Author = "Joanne Schoen",
-                            PublicationDate = new DateTime(2022, 7, 8, 2, 15, 10, 428, DateTimeKind.Local).AddTicks(6050),
+                            Id = 32,
+                            Author = "Nya Wyman",
+                            PublicationDate = new DateTime(2022, 5, 21, 13, 32, 54, 893, DateTimeKind.Local).AddTicks(9084),
                             Quantity = 9,
-                            Title = "Impedit ad dolorem vel.",
-                            NumberOfPages = 123
+                            Title = "Qui molestiae similique dolore.",
+                            NumberOfPages = 73
                         },
                         new
                         {
-                            Id = 31,
-                            Author = "Ova Spinka",
-                            PublicationDate = new DateTime(2022, 8, 16, 1, 9, 53, 780, DateTimeKind.Local).AddTicks(5843),
-                            Quantity = 8,
-                            Title = "Illum et alias perferendis.",
-                            NumberOfPages = 124
+                            Id = 33,
+                            Author = "Rosa Predovic",
+                            PublicationDate = new DateTime(2022, 3, 25, 19, 11, 27, 699, DateTimeKind.Local).AddTicks(5999),
+                            Quantity = 6,
+                            Title = "Assumenda soluta id consequatur.",
+                            NumberOfPages = 130
                         },
                         new
                         {
                             Id = 37,
-                            Author = "Dulce Kessler",
-                            PublicationDate = new DateTime(2020, 12, 2, 7, 45, 48, 119, DateTimeKind.Local).AddTicks(289),
-                            Quantity = 6,
-                            Title = "Minus sequi illum qui.",
-                            NumberOfPages = 124
+                            Author = "Bridget Anderson",
+                            PublicationDate = new DateTime(2021, 11, 30, 15, 22, 59, 643, DateTimeKind.Local).AddTicks(4247),
+                            Quantity = 10,
+                            Title = "Rerum possimus aliquid enim.",
+                            NumberOfPages = 67
                         },
                         new
                         {
-                            Id = 40,
-                            Author = "Payton Jakubowski",
-                            PublicationDate = new DateTime(2020, 12, 16, 11, 28, 17, 81, DateTimeKind.Local).AddTicks(1797),
-                            Quantity = 9,
-                            Title = "Rerum quia laboriosam aut.",
-                            NumberOfPages = 121
+                            Id = 38,
+                            Author = "Glenda Auer",
+                            PublicationDate = new DateTime(2020, 11, 25, 3, 15, 21, 726, DateTimeKind.Local).AddTicks(7699),
+                            Quantity = 5,
+                            Title = "Laboriosam qui animi omnis.",
+                            NumberOfPages = 127
+                        },
+                        new
+                        {
+                            Id = 39,
+                            Author = "Hubert Skiles",
+                            PublicationDate = new DateTime(2021, 1, 4, 0, 0, 19, 658, DateTimeKind.Local).AddTicks(2572),
+                            Quantity = 10,
+                            Title = "Qui dolorum voluptatem provident.",
+                            NumberOfPages = 57
                         });
                 });
 
@@ -1253,102 +1185,120 @@ namespace LibraryMVC.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 2,
-                            Author = "Barton Denesik",
-                            PublicationDate = new DateTime(2021, 7, 22, 2, 44, 46, 593, DateTimeKind.Local).AddTicks(395),
-                            Quantity = 8,
-                            Title = "Accusantium voluptas similique maxime.",
-                            Runtime = "86"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Author = "Kim Nolan",
-                            PublicationDate = new DateTime(2021, 3, 4, 12, 2, 11, 815, DateTimeKind.Local).AddTicks(8101),
+                            Id = 1,
+                            Author = "Elmo Gorczany",
+                            PublicationDate = new DateTime(2022, 9, 16, 7, 29, 38, 941, DateTimeKind.Local).AddTicks(9365),
                             Quantity = 5,
-                            Title = "Aut officia culpa qui.",
-                            Runtime = "98"
+                            Title = "Suscipit saepe iusto distinctio.",
+                            Runtime = "55"
                         },
                         new
                         {
-                            Id = 8,
-                            Author = "Trinity Wintheiser",
-                            PublicationDate = new DateTime(2021, 2, 7, 6, 55, 40, 210, DateTimeKind.Local).AddTicks(8322),
-                            Quantity = 9,
-                            Title = "Eum voluptas maiores molestiae.",
-                            Runtime = "134"
+                            Id = 6,
+                            Author = "Earl Wuckert",
+                            PublicationDate = new DateTime(2022, 2, 18, 1, 23, 54, 964, DateTimeKind.Local).AddTicks(5552),
+                            Quantity = 5,
+                            Title = "Et odit et corporis.",
+                            Runtime = "120"
                         },
                         new
                         {
-                            Id = 9,
-                            Author = "Tod Durgan",
-                            PublicationDate = new DateTime(2021, 2, 26, 20, 9, 46, 374, DateTimeKind.Local).AddTicks(1883),
+                            Id = 10,
+                            Author = "Bonita Bradtke",
+                            PublicationDate = new DateTime(2022, 11, 9, 3, 18, 26, 163, DateTimeKind.Local).AddTicks(862),
+                            Quantity = 10,
+                            Title = "Ullam quas dolorem neque.",
+                            Runtime = "71"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Author = "Xander Ondricka",
+                            PublicationDate = new DateTime(2021, 8, 15, 8, 39, 1, 210, DateTimeKind.Local).AddTicks(1092),
                             Quantity = 8,
-                            Title = "Voluptatibus possimus culpa possimus.",
-                            Runtime = "108"
+                            Title = "Qui ut vitae enim.",
+                            Runtime = "89"
                         },
                         new
                         {
                             Id = 13,
-                            Author = "May Quitzon",
-                            PublicationDate = new DateTime(2022, 2, 20, 20, 59, 31, 904, DateTimeKind.Local).AddTicks(2298),
-                            Quantity = 8,
-                            Title = "Reprehenderit necessitatibus ipsam vero.",
-                            Runtime = "129"
+                            Author = "German Dickens",
+                            PublicationDate = new DateTime(2021, 7, 15, 13, 6, 56, 175, DateTimeKind.Local).AddTicks(6185),
+                            Quantity = 5,
+                            Title = "Et non ducimus totam.",
+                            Runtime = "63"
                         },
                         new
                         {
-                            Id = 19,
-                            Author = "Madge Morar",
-                            PublicationDate = new DateTime(2021, 9, 4, 5, 28, 1, 749, DateTimeKind.Local).AddTicks(5653),
-                            Quantity = 5,
-                            Title = "Modi accusamus aut et.",
-                            Runtime = "125"
+                            Id = 17,
+                            Author = "Elda O'Connell",
+                            PublicationDate = new DateTime(2021, 7, 6, 10, 59, 58, 781, DateTimeKind.Local).AddTicks(4340),
+                            Quantity = 9,
+                            Title = "Mollitia et ducimus possimus.",
+                            Runtime = "51"
                         },
                         new
                         {
                             Id = 21,
-                            Author = "Devin Stokes",
-                            PublicationDate = new DateTime(2022, 2, 24, 20, 31, 8, 486, DateTimeKind.Local).AddTicks(3151),
-                            Quantity = 9,
-                            Title = "Temporibus consequatur est necessitatibus.",
-                            Runtime = "141"
+                            Author = "Broderick Tromp",
+                            PublicationDate = new DateTime(2022, 11, 4, 2, 55, 44, 189, DateTimeKind.Local).AddTicks(5602),
+                            Quantity = 10,
+                            Title = "Odio ut quos in.",
+                            Runtime = "56"
                         },
                         new
                         {
-                            Id = 24,
-                            Author = "Sidney Renner",
-                            PublicationDate = new DateTime(2022, 1, 3, 11, 22, 58, 549, DateTimeKind.Local).AddTicks(3496),
+                            Id = 28,
+                            Author = "Diego Price",
+                            PublicationDate = new DateTime(2021, 5, 21, 4, 4, 47, 491, DateTimeKind.Local).AddTicks(2686),
+                            Quantity = 5,
+                            Title = "Non molestias natus ad.",
+                            Runtime = "125"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            Author = "Ora O'Hara",
+                            PublicationDate = new DateTime(2021, 6, 8, 12, 59, 3, 864, DateTimeKind.Local).AddTicks(6392),
+                            Quantity = 9,
+                            Title = "Ut nemo qui eveniet.",
+                            Runtime = "103"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Author = "Erica Anderson",
+                            PublicationDate = new DateTime(2022, 8, 15, 22, 19, 4, 436, DateTimeKind.Local).AddTicks(2596),
+                            Quantity = 5,
+                            Title = "Ea tempore sapiente libero.",
+                            Runtime = "121"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            Author = "Judah Boehm",
+                            PublicationDate = new DateTime(2022, 6, 30, 7, 54, 15, 398, DateTimeKind.Local).AddTicks(8490),
                             Quantity = 10,
-                            Title = "Aliquam reiciendis ipsa molestiae.",
-                            Runtime = "90"
+                            Title = "Nobis officia voluptas consequatur.",
+                            Runtime = "65"
                         },
                         new
                         {
                             Id = 35,
-                            Author = "Jaleel Sauer",
-                            PublicationDate = new DateTime(2021, 10, 6, 13, 57, 53, 67, DateTimeKind.Local).AddTicks(4528),
-                            Quantity = 5,
-                            Title = "Ipsum et autem ea.",
-                            Runtime = "75"
+                            Author = "Ryann Swaniawski",
+                            PublicationDate = new DateTime(2021, 5, 30, 14, 57, 24, 467, DateTimeKind.Local).AddTicks(6374),
+                            Quantity = 6,
+                            Title = "Perspiciatis odio mollitia molestias.",
+                            Runtime = "55"
                         },
                         new
                         {
-                            Id = 38,
-                            Author = "Gerda Abshire",
-                            PublicationDate = new DateTime(2021, 11, 12, 20, 23, 21, 433, DateTimeKind.Local).AddTicks(9691),
-                            Quantity = 9,
-                            Title = "Molestiae cum accusantium voluptatibus.",
-                            Runtime = "136"
-                        },
-                        new
-                        {
-                            Id = 39,
-                            Author = "Kitty Gerhold",
-                            PublicationDate = new DateTime(2022, 6, 12, 14, 51, 46, 39, DateTimeKind.Local).AddTicks(3920),
-                            Quantity = 9,
-                            Title = "Tempora rerum in quia.",
-                            Runtime = "125"
+                            Id = 40,
+                            Author = "Abdul Orn",
+                            PublicationDate = new DateTime(2020, 12, 27, 1, 3, 10, 226, DateTimeKind.Local).AddTicks(7734),
+                            Quantity = 10,
+                            Title = "Earum itaque sint dignissimos.",
+                            Runtime = "123"
                         });
                 });
 
@@ -1361,123 +1311,123 @@ namespace LibraryMVC.Migrations
                     b.HasData(
                         new
                         {
+                            Id = 2,
+                            Author = "William Grimes",
+                            PublicationDate = new DateTime(2020, 12, 9, 4, 29, 7, 734, DateTimeKind.Local).AddTicks(3795),
+                            Quantity = 5,
+                            Title = "Alias doloribus nulla non."
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Author = "Tyson Stokes",
+                            PublicationDate = new DateTime(2022, 10, 10, 0, 36, 27, 492, DateTimeKind.Local).AddTicks(7758),
+                            Quantity = 6,
+                            Title = "Non voluptas quas ut."
+                        },
+                        new
+                        {
                             Id = 5,
-                            Author = "Nikki Aufderhar",
-                            PublicationDate = new DateTime(2021, 9, 21, 2, 58, 7, 942, DateTimeKind.Local).AddTicks(9671),
+                            Author = "Wilton Green",
+                            PublicationDate = new DateTime(2021, 4, 28, 9, 1, 57, 882, DateTimeKind.Local).AddTicks(8912),
                             Quantity = 8,
-                            Title = "Exercitationem quam repellat nulla."
+                            Title = "Ab libero aut temporibus."
                         },
                         new
                         {
-                            Id = 10,
-                            Author = "Ardella Kunde",
-                            PublicationDate = new DateTime(2021, 2, 1, 11, 18, 20, 900, DateTimeKind.Local).AddTicks(9897),
+                            Id = 8,
+                            Author = "Jerrod Deckow",
+                            PublicationDate = new DateTime(2022, 10, 11, 7, 32, 37, 607, DateTimeKind.Local).AddTicks(4792),
                             Quantity = 9,
-                            Title = "Incidunt ea blanditiis voluptate."
+                            Title = "Cumque commodi sit alias."
                         },
                         new
                         {
-                            Id = 11,
-                            Author = "Geo Mayert",
-                            PublicationDate = new DateTime(2022, 9, 29, 0, 4, 15, 672, DateTimeKind.Local).AddTicks(3828),
+                            Id = 9,
+                            Author = "Serenity Mills",
+                            PublicationDate = new DateTime(2022, 7, 19, 22, 57, 30, 794, DateTimeKind.Local).AddTicks(5962),
                             Quantity = 7,
-                            Title = "Molestiae quia ut maxime."
+                            Title = "Aspernatur quis fugiat tempore."
                         },
                         new
                         {
-                            Id = 12,
-                            Author = "Sanford Little",
-                            PublicationDate = new DateTime(2022, 3, 11, 10, 8, 55, 919, DateTimeKind.Local).AddTicks(7571),
-                            Quantity = 9,
-                            Title = "Possimus nisi deleniti eos."
+                            Id = 15,
+                            Author = "Evan Daniel",
+                            PublicationDate = new DateTime(2022, 3, 29, 1, 21, 52, 532, DateTimeKind.Local).AddTicks(763),
+                            Quantity = 7,
+                            Title = "Est consectetur corporis modi."
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Author = "Litzy Maggio",
+                            PublicationDate = new DateTime(2022, 1, 5, 22, 59, 30, 999, DateTimeKind.Local).AddTicks(6342),
+                            Quantity = 8,
+                            Title = "Necessitatibus ut deleniti veritatis."
                         },
                         new
                         {
                             Id = 18,
-                            Author = "Leda Ankunding",
-                            PublicationDate = new DateTime(2022, 3, 19, 20, 0, 0, 11, DateTimeKind.Local).AddTicks(8555),
-                            Quantity = 10,
-                            Title = "Qui quod nemo soluta."
+                            Author = "Ulices Upton",
+                            PublicationDate = new DateTime(2022, 8, 28, 1, 23, 12, 79, DateTimeKind.Local).AddTicks(8322),
+                            Quantity = 7,
+                            Title = "Inventore similique non vero."
                         },
                         new
                         {
-                            Id = 20,
-                            Author = "Adonis Crooks",
-                            PublicationDate = new DateTime(2021, 12, 18, 9, 50, 32, 92, DateTimeKind.Local).AddTicks(9563),
-                            Quantity = 5,
-                            Title = "Consequuntur est fugit ut."
+                            Id = 19,
+                            Author = "Alphonso Kunde",
+                            PublicationDate = new DateTime(2021, 7, 21, 11, 11, 40, 899, DateTimeKind.Local).AddTicks(6674),
+                            Quantity = 7,
+                            Title = "Tenetur eaque fugit natus."
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Author = "Rachael Romaguera",
+                            PublicationDate = new DateTime(2021, 9, 20, 7, 12, 14, 884, DateTimeKind.Local).AddTicks(1530),
+                            Quantity = 10,
+                            Title = "Quos labore culpa in."
                         },
                         new
                         {
                             Id = 23,
-                            Author = "Jodie Hahn",
-                            PublicationDate = new DateTime(2020, 11, 11, 0, 29, 2, 284, DateTimeKind.Local).AddTicks(7173),
-                            Quantity = 5,
-                            Title = "Et in architecto perferendis."
+                            Author = "Christy Runolfsdottir",
+                            PublicationDate = new DateTime(2022, 6, 9, 20, 0, 36, 957, DateTimeKind.Local).AddTicks(7292),
+                            Quantity = 10,
+                            Title = "Eum suscipit id iste."
                         },
                         new
                         {
                             Id = 25,
-                            Author = "Nicola Gorczany",
-                            PublicationDate = new DateTime(2021, 7, 28, 7, 25, 50, 952, DateTimeKind.Local).AddTicks(8219),
+                            Author = "London Lockman",
+                            PublicationDate = new DateTime(2022, 8, 27, 17, 6, 17, 33, DateTimeKind.Local).AddTicks(1108),
                             Quantity = 10,
-                            Title = "Vitae qui itaque debitis."
+                            Title = "Unde impedit non ducimus."
                         },
                         new
                         {
                             Id = 27,
-                            Author = "Annalise Skiles",
-                            PublicationDate = new DateTime(2021, 8, 18, 15, 57, 19, 914, DateTimeKind.Local).AddTicks(3183),
-                            Quantity = 10,
-                            Title = "Quo distinctio sint dolorem."
-                        },
-                        new
-                        {
-                            Id = 28,
-                            Author = "Amos Volkman",
-                            PublicationDate = new DateTime(2021, 4, 24, 12, 45, 53, 372, DateTimeKind.Local).AddTicks(8777),
-                            Quantity = 8,
-                            Title = "Totam unde incidunt delectus."
-                        },
-                        new
-                        {
-                            Id = 29,
-                            Author = "Lavern Grant",
-                            PublicationDate = new DateTime(2020, 12, 1, 4, 53, 50, 891, DateTimeKind.Local).AddTicks(7116),
-                            Quantity = 10,
-                            Title = "Molestiae hic voluptatem reprehenderit."
-                        },
-                        new
-                        {
-                            Id = 32,
-                            Author = "Bonita Green",
-                            PublicationDate = new DateTime(2020, 12, 6, 15, 55, 45, 16, DateTimeKind.Local).AddTicks(7446),
+                            Author = "Jamal Hessel",
+                            PublicationDate = new DateTime(2021, 2, 17, 13, 25, 29, 234, DateTimeKind.Local).AddTicks(3815),
                             Quantity = 7,
-                            Title = "Quia et est tenetur."
+                            Title = "Illum dolorem deserunt numquam."
                         },
                         new
                         {
-                            Id = 33,
-                            Author = "Helena Durgan",
-                            PublicationDate = new DateTime(2022, 4, 29, 0, 20, 56, 283, DateTimeKind.Local).AddTicks(8119),
-                            Quantity = 5,
-                            Title = "Mollitia expedita aperiam minus."
-                        },
-                        new
-                        {
-                            Id = 34,
-                            Author = "Derek Klein",
-                            PublicationDate = new DateTime(2021, 12, 23, 8, 9, 21, 487, DateTimeKind.Local).AddTicks(1588),
-                            Quantity = 6,
-                            Title = "Iure voluptatibus iste quo."
+                            Id = 30,
+                            Author = "Christine Gusikowski",
+                            PublicationDate = new DateTime(2021, 1, 12, 11, 57, 13, 146, DateTimeKind.Local).AddTicks(1974),
+                            Quantity = 9,
+                            Title = "Perspiciatis officiis occaecati iusto."
                         },
                         new
                         {
                             Id = 36,
-                            Author = "Sydney West",
-                            PublicationDate = new DateTime(2021, 7, 14, 12, 28, 48, 1, DateTimeKind.Local).AddTicks(8346),
-                            Quantity = 9,
-                            Title = "Cum non aliquid rerum."
+                            Author = "Della Gusikowski",
+                            PublicationDate = new DateTime(2022, 5, 13, 12, 50, 4, 511, DateTimeKind.Local).AddTicks(3971),
+                            Quantity = 5,
+                            Title = "Laborum voluptates nulla recusandae."
                         });
                 });
 
@@ -1485,8 +1435,7 @@ namespace LibraryMVC.Migrations
                 {
                     b.HasOne("LibraryMVC.Entity.Borrower", "Borrower")
                         .WithMany("BorrowingHistories")
-                        .HasForeignKey("LibraryCardId")
-                        .HasPrincipalKey("LibraryCardId")
+                        .HasForeignKey("BorrowerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

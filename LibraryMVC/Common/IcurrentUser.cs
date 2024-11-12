@@ -1,8 +1,8 @@
 namespace LibraryMVC.Common;
 
-public class IcurrentUser
+public interface IcurrentUser
 {
-    string UserId { get; }
-    string UserName { get; }
-    bool IsAuthenticated { get; }
+    public string? UserId { get; }
+    public string? UserName { get; }
+    public bool? IsAuthenticated { get; }
 }

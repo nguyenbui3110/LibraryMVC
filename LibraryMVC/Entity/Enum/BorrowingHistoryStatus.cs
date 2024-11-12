@@ -1,10 +1,9 @@
-namespace LibraryMVC.Entity.Enum
+namespace LibraryMVC.Entity.Enum;
+
+public enum BorrowingHistoryStatus
 {
-    public enum BorrowingHistoryStatus
-    {
-        Borrowed,
-        Returned,
-        Overdue,
-        Lost
-    }
+    Borrowed,
+    Returned,
+    Overdue,
+    Lost
 }

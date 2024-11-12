@@ -1,10 +1,9 @@
+using Bogus;
+using LibraryMVC.Constants;
 using LibraryMVC.Entity;
+using LibraryMVC.Entity.Enum;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Bogus;
-using Microsoft.AspNetCore.Http.Features;
-using LibraryMVC.Entity.Enum;
-using LibraryMVC.Constants;
 
 namespace LibraryMVC.Data;
 
@@ -16,27 +15,27 @@ public static class SeedData
         modelBuilder.Entity<IdentityRole<int>>().HasData(roles);
         var admin = GetAdmin();
         modelBuilder.Entity<Borrower>().HasData(admin);
-        modelBuilder.Entity<IdentityUserRole<int>>().HasData(new IdentityUserRole<int>()
+        modelBuilder.Entity<IdentityUserRole<int>>().HasData(new IdentityUserRole<int>
         {
             RoleId = roles[0].Id,
             UserId = admin.Id
         });
         var borrower = GetBorrower();
         modelBuilder.Entity<Borrower>().HasData(borrower);
-        modelBuilder.Entity<IdentityUserRole<int>>().HasData(borrower.Select(b => new IdentityUserRole<int>()
+        modelBuilder.Entity<IdentityUserRole<int>>().HasData(borrower.Select(b => new IdentityUserRole<int>
         {
             RoleId = roles[1].Id,
             UserId = b.Id
         }));
         var libraryItems = GetLibraryItem();
         SeedType(libraryItems, modelBuilder);
-        
+
         GetBorrowingHistory(borrower, libraryItems, modelBuilder);
     }
 
     private static Borrower GetAdmin()
     {
-        return new Borrower()
+        return new Borrower
         {
             Id = 1,
             Name = "Admin",
@@ -48,10 +47,10 @@ public static class SeedData
             PhoneNumber = "123456789",
             EmailConfirmed = true,
             SecurityStamp = Guid.NewGuid().ToString(),
-            PasswordHash = new PasswordHasher<Borrower>().HashPassword(null!, "Admin@123"),
-            LibraryCardId = Guid.NewGuid()
+            PasswordHash = new PasswordHasher<Borrower>().HashPassword(null!, "Admin@123")
         };
     }
+
     private static List<IdentityRole<int>> GetDefaultRoles()
     {
         var roles = new List<IdentityRole<int>>
@@ -61,6 +60,7 @@ public static class SeedData
         };
         return roles;
     }
+
     private static void SeedType(List<LibraryItem> items, ModelBuilder modelBuilder)
     {
         var random = new Random();
@@ -69,7 +69,7 @@ public static class SeedData
             switch (random.Next(1, 4))
             {
                 case 1:
-                    modelBuilder.Entity<Book>().HasData(new Book()
+                    modelBuilder.Entity<Book>().HasData(new Book
                     {
                         Id = item.Id,
                         Author = item.Author,
@@ -80,7 +80,7 @@ public static class SeedData
                     });
                     break;
                 case 2:
-                    modelBuilder.Entity<Dvd>().HasData(new Dvd()
+                    modelBuilder.Entity<Dvd>().HasData(new Dvd
                     {
                         Id = item.Id,
                         Author = item.Author,
@@ -91,36 +91,33 @@ public static class SeedData
                     });
                     break;
                 case 3:
-                    modelBuilder.Entity<Magazine>().HasData(new Magazine()
+                    modelBuilder.Entity<Magazine>().HasData(new Magazine
                     {
                         Id = item.Id,
                         Author = item.Author,
                         Title = item.Title,
                         PublicationDate = item.PublicationDate,
-                        Quantity = item.Quantity,
+                        Quantity = item.Quantity
                     });
                     break;
-                default:
-                    break;
             }
+
             {
-                
             }
         }
-        
     }
 
     private static void GetBorrowingHistory(List<Borrower> borrower, List<LibraryItem> libraryItems,
         ModelBuilder modelBuilder)
     {
         var random = new Random();
-        var BorrowingHistories= new Faker<BorrowingHistory>()
+        var BorrowingHistories = new Faker<BorrowingHistory>()
             .RuleFor(bh => bh.Id, f => f.IndexFaker + 1)
-            .RuleFor(bh=>bh.LibraryCardId,f=>f.PickRandom(borrower).LibraryCardId)
-            .RuleFor(bh=>bh.LibraryItemId,f=>f.PickRandom(libraryItems).Id)
-            .RuleFor(bh=>bh.BorrowDate,f=>f.PickRandom(libraryItems).PublicationDate.AddDays(random.Next(50,100)))
-            .RuleFor(bh=>bh.DueDate,(f,bh)=>bh.BorrowDate.AddDays(random.Next(10,30)))
-            .RuleFor(bh=>bh.Status,f=>f.PickRandom<BorrowingHistoryStatus>())
+            .RuleFor(bh => bh.LibraryItemId, f => f.PickRandom(libraryItems).Id)
+            .RuleFor(bh => bh.BorrowDate, f => f.PickRandom(libraryItems).PublicationDate.AddDays(random.Next(50, 100)))
+            .RuleFor(bh => bh.DueDate, (f, bh) => bh.BorrowDate?.AddDays(random.Next(10, 30)))
+            .RuleFor(bh => bh.Status, f => f.PickRandom<BorrowingHistoryStatus>())
+            .RuleFor(bh => bh.BorrowerId, f => f.PickRandom(borrower).Id)
             .Generate(25);
         modelBuilder.Entity<BorrowingHistory>().HasData(BorrowingHistories);
     }
@@ -129,10 +126,10 @@ public static class SeedData
     private static List<LibraryItem> GetLibraryItem()
     {
         return new Faker<LibraryItem>()
-            .RuleFor(item =>item.Id,f=>f.IndexFaker+1)
-            .RuleFor(item =>item.Author, f => f.Name.FullName())
+            .RuleFor(item => item.Id, f => f.IndexFaker + 1)
+            .RuleFor(item => item.Author, f => f.Name.FullName())
             .RuleFor(item => item.Title, f => f.Lorem.Sentence(4))
-            .RuleFor(item => item.PublicationDate, f => f.Date.Past(2,DateTime.Now.AddYears(-2)))
+            .RuleFor(item => item.PublicationDate, f => f.Date.Past(2, DateTime.Now.AddYears(-2)))
             .RuleFor(item => item.Quantity, f => f.Random.Number(5, 10))
             .Generate(40);
     }
@@ -154,8 +151,6 @@ public static class SeedData
             .RuleFor(u => u.EmailConfirmed, _ => true)
             .RuleFor(u => u.SecurityStamp, _ => Guid.NewGuid().ToString())
             .RuleFor(u => u.PasswordHash, _ => new PasswordHasher<Borrower>().HashPassword(null!, "User@123"))
-            .RuleFor(u => u.LibraryCardId, (f,u) =>{var result = Guid.NewGuid();
-                                                return result;})            
             .Generate(20);
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using AutoMapper;
 using LibraryMVC.Entity;
 using LibraryMVC.Enums;
@@ -6,6 +5,7 @@ using LibraryMVC.Models;
 using LibraryMVC.Repo;
 
 namespace LibraryMVC.Services;
+
 public interface ILibraryService
 {
     Task<IEnumerable<LibraryItem>> GetLibraryItemsAsync();
@@ -15,16 +15,13 @@ public interface ILibraryService
     Task AddLibraryItemAsync(LibraryItemModel model);
     Task DeleteItemAsync(int id);
     Task UpdateLibraryItemAsync(LibraryItemModel model);
-
-
-
 }
 
-public class LibraryService : ILibraryService      
+public class LibraryService : ILibraryService
 {
-    private readonly IUnitOfWork _unitOfWork;
     private readonly LibraryRepo _libraryRepo;
     private readonly IMapper _mapper;
+    private readonly IUnitOfWork _unitOfWork;
 
     public LibraryService(LibraryRepo libraryRepo, IUnitOfWork unitOfWork, IMapper mapper)
     {
@@ -40,7 +37,7 @@ public class LibraryService : ILibraryService
         {
             ItemType.Book => await _libraryRepo.GetBooksAsync(),
             ItemType.Magazine => await _libraryRepo.GetMagazinesAsync(),
-            ItemType.Dvd =>  await _libraryRepo.GetDvdsAsync(),
+            ItemType.Dvd => await _libraryRepo.GetDvdsAsync(),
             _ => throw new NotImplementedException()
         };
     }
@@ -52,15 +49,15 @@ public class LibraryService : ILibraryService
 
     public async Task<IEnumerable<LibraryItem>> GetLibraryItemsAsync()
     {
-        return await _libraryRepo.GetAllAsync();
-
-
+        var items = await _libraryRepo.GetAllAsync();
+        return items.OrderByDescending(i => i.Quantity);
     }
 
     public async Task<IEnumerable<LibraryItem>> SearchLibraryItemAsync(string searchParam)
     {
         return await _libraryRepo.SearchLibraryItemAsync(searchParam);
     }
+
     public async Task AddLibraryItemAsync(LibraryItemModel model)
     {
         switch (model.Type)
@@ -77,8 +74,10 @@ public class LibraryService : ILibraryService
             default:
                 return;
         }
+
         await _unitOfWork.SaveChangesAsync();
     }
+
     public async Task DeleteItemAsync(int id)
     {
         var libraryItem = await _libraryRepo.GetLibraryItemAsync(id);
@@ -88,15 +87,9 @@ public class LibraryService : ILibraryService
 
     public async Task UpdateLibraryItemAsync(LibraryItemModel model)
     {
-    
         var existingItem = await _libraryRepo.GetLibraryItemAsync(model.Id);
-        if (existingItem == null)
-        {
-            throw new Exception("Item not found");
-        }
+        if (existingItem == null) throw new Exception("Item not found");
         _mapper.Map(model, existingItem);
         await _unitOfWork.SaveChangesAsync();
-        return;
-
     }
 }

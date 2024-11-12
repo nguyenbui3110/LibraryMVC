@@ -1,5 +1,5 @@
 namespace LibraryMVC.Entity;
 
-public class Magazine:LibraryItem
+public class Magazine : LibraryItem
 {
 }

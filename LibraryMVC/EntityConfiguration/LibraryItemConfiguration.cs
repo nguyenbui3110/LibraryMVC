@@ -12,10 +12,9 @@ public class LibraryItemConfiguration : IEntityTypeConfiguration<LibraryItem>
         builder.Property(item => item.Title).IsRequired().HasMaxLength(50);
         builder.Property(item => item.Author).IsRequired().HasMaxLength(50);
         builder.Property(item => item.PublicationDate).IsRequired();
-        builder.HasDiscriminator<string>("ItemType")   // Phân biệt các loại item
+        builder.HasDiscriminator<string>("ItemType") // Phân biệt các loại item
             .HasValue<Book>("Book")
             .HasValue<Dvd>("DVD")
             .HasValue<Magazine>("Magazine");
     }
 }
-    

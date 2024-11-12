@@ -5,8 +5,8 @@ For more information on enabling MVC for empty projects, visit https://go.micros
     Layout = "_Layout";
     ViewBag.Title = "Detail";
 }
+@using LibraryMVC.Entity
 @model LibraryMVC.Entity.LibraryItem
-@using LibraryMVC.Entity;
 <div class="card mb-3 align-content-center" style="max-width: 1280px;">
     <div class="row g-0">
         <div class="col-md-4">
@@ -27,7 +27,9 @@ For more information on enabling MVC for empty projects, visit https://go.micros
             <div class="card-body">
                 <h5 class="card-title">@(Model.GetType().Name): @Model.Title</h5>
                 <p class="card-text">@Model.Author</p>
-                <p class="card-text"><small class="text-body-secondary">Quantity: @Model.Quantity</small></p>
+                <p class="card-text">
+                    <small class="text-body-secondary">Quantity: @Model.Quantity</small>
+                </p>
                 @if (Model is Book)
                 {
                     <p class="card-text">Number Of Pages: @((Model as Book).NumberOfPages)</p>

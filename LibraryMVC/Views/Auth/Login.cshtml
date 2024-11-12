@@ -3,21 +3,23 @@
     ViewData["Title"] = "Login";
     ViewData["Greeting"] = "Welcome Back!";
 }
-@model LibraryMVC.Models.LoginModel
+@model LoginModel
 <form asp-action="login" asp-controller="Auth" method="post" class="user">
     <div class="form-group">
         <input asp-for="Email" type="email" class="form-control form-control-user" id="exampleInputEmail"
-            aria-describedby="emailHelp" placeholder="Enter Email Address...">
+               aria-describedby="emailHelp" placeholder="Enter Email Address...">
     </div>
     <div class="form-group">
         <input asp-for="Password" asp-validation-for="Password" class="form-control form-control-user"
-            id="exampleInputPassword" placeholder="Password">
+               id="exampleInputPassword" placeholder="Password">
     </div>
     <div class="form-group">
         <div class="custom-control custom-checkbox small">
             <input asp-for="RememberMe" asp-validation-for="Password" class="custom-control-input" id="customCheck">
-            <label class="custom-control-label" for="customCheck">Remember
-                Me</label>
+            <label class="custom-control-label" for="customCheck">
+                Remember
+                Me
+            </label>
         </div>
     </div>
     <button type="submit" class="btn btn-primary btn-user btn-block">
@@ -30,4 +32,11 @@
     <a href="#" class="btn btn-facebook btn-user btn-block">
         <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
     </a>
+    <hr>
+    <div class="text-center">
+        <a>Forgot Password?</a>
+    </div>
+    <div class="text-center">
+        <a class="small" asp-action="Register">Create an Account!</a>
+    </div>
 </form>

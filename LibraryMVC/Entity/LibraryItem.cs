@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace LibraryMVC.Entity;
 
 public class LibraryItem

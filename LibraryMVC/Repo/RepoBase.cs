@@ -1,12 +1,12 @@
-using System;
 using LibraryMVC.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryMVC.Repo;
 
-public class RepoBase<T>: IRepo<T> where T : class
+public class RepoBase<T> : IRepo<T> where T : class
 {
     protected readonly LibraryDbContext _dbContext;
+
     public RepoBase(LibraryDbContext dbContext)
     {
         _dbContext = dbContext;
@@ -15,6 +15,11 @@ public class RepoBase<T>: IRepo<T> where T : class
     public async Task<IEnumerable<T>> GetAllAsync()
     {
         return await _dbContext.Set<T>().ToListAsync();
+    }
+
+    public async Task<T?> GetByIdAsync(int id)
+    {
+        return await _dbContext.Set<T>().FindAsync(id);
     }
 
     public void Add(T entity)
@@ -37,4 +42,3 @@ public class RepoBase<T>: IRepo<T> where T : class
         _dbContext.Set<T>().RemoveRange(entities);
     }
 }
-

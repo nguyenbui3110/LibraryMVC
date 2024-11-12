@@ -2,7 +2,7 @@ using System.Security.Claims;
 
 namespace LibraryMVC.Common;
 
-public class CurrentUser: IcurrentUser
+public class CurrentUser : IcurrentUser
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
 
@@ -10,10 +10,10 @@ public class CurrentUser: IcurrentUser
     {
         _httpContextAccessor = httpContextAccessor;
     }
-    public string UserId => _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
-    public string UserName => _httpContextAccessor.HttpContext.User.Identity.Name;
+    public string? UserId => _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-    public bool IsAuthenticated => _httpContextAccessor.HttpContext.User.Identity.IsAuthenticated;
-    
+    public string? UserName => _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.Name);
+
+    public bool? IsAuthenticated => _httpContextAccessor.HttpContext?.User.Identity.IsAuthenticated;
 }

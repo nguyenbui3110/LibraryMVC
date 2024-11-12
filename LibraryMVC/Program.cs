@@ -1,6 +1,5 @@
-using LibraryMVC.Constants;
 using LibraryMVC.Extensions;
-using Microsoft.AspNetCore.Authentication.Cookies;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddServices()
     .AddRepositorys()
     .AddDbContext(builder.Configuration)
-    .ConfigureIdentity();
+    .ConfigureIdentity()
+    .AddCurrentUser();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllersWithViews();
 
@@ -33,7 +33,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    "default",
+    "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
